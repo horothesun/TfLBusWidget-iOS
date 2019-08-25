@@ -11,18 +11,18 @@ final class ViewModelOperationQueue {
 
     private let userConfiguration: UserConfiguration
     private let tflWrapper: TfLWrapper
-    private let arrivalsTextFormatter: ArrivalsTextFormatter
+    private let displayModelBuilder: DisplayModelBuilder
     private let processingQueue: OperationQueue
 
     init(
         userConfiguration: UserConfiguration,
         tflWrapper: TfLWrapper,
-        arrivalsTextFormatter: ArrivalsTextFormatter,
+        displayModelBuilder: DisplayModelBuilder,
         processingQueue: OperationQueue
     ) {
         self.userConfiguration = userConfiguration
         self.tflWrapper = tflWrapper
-        self.arrivalsTextFormatter = arrivalsTextFormatter
+        self.displayModelBuilder = displayModelBuilder
         self.processingQueue = processingQueue
     }
 }
@@ -54,7 +54,7 @@ extension ViewModelOperationQueue: ViewModel {
             getBusStop: getBusStop,
             getArrivals: getArrivals,
             completion: completion,
-            arrivalsTextFormatter: arrivalsTextFormatter
+            displayModelBuilder: displayModelBuilder
         )
         let adapter = BlockOperation { [weak getBusStop, weak getArrivals, weak makeDisplayModel] in
             makeDisplayModel?.input1 = getBusStop?.output
@@ -75,14 +75,13 @@ extension ViewModelOperationQueue: ViewModel {
         getBusStop: OutputOperation<ResultBusStop>,
         getArrivals: OutputOperation<ResultArrivals>,
         completion: @escaping (DisplayModel) -> Void,
-        arrivalsTextFormatter: ArrivalsTextFormatter
+        displayModelBuilder: DisplayModelBuilder
     ) -> MakeDisplayModelOperation {
         let makeDisplayModel = MakeDisplayModelOperation { completion in
-            let displayModel = displayModelFrom(
+            let displayModel = displayModelBuilder.displayModelFrom(
                 lineId: lineId,
                 resultBusStop: getBusStop.output,
-                resultArrivalsInSeconds: getArrivals.output,
-                with: arrivalsTextFormatter
+                resultArrivalsInSeconds: getArrivals.output
             )
             completion(displayModel)
         }
@@ -95,32 +94,5 @@ extension ViewModelOperationQueue: ViewModel {
             OperationQueue.main.addOperation { completion(displayModel) }
         }
         return makeDisplayModel
-    }
-
-    private static func displayModelFrom(
-        lineId: String,
-        resultBusStop: ResultBusStop?,
-        resultArrivalsInSeconds: ResultArrivals?,
-        with arrivalsTextFormatter: ArrivalsTextFormatter
-    ) -> DisplayModel {
-        guard
-            let resultBusStop = resultBusStop,
-            let resultArrivalsInSeconds = resultArrivalsInSeconds,
-            case let .success(busStop) = resultBusStop,
-            case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
-        else {
-            return .errorDisplayModel
-        }
-
-        let arrivalsText = arrivalsTextFormatter.arrivalsText(
-            from: .success(arrivalsInSeconds),
-            errorMessage: DisplayModel.errorMessage
-        )
-        return DisplayModel(
-            busStopCode: busStop.streetCode,
-            busStopName: busStop.stopName,
-            line: lineId.uppercased(),
-            arrivals: arrivalsText
-        )
     }
 }

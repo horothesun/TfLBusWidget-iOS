@@ -8,7 +8,7 @@ enum Builder {
         return ViewModelOperationQueue(
             userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
             tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
-            arrivalsTextFormatter: ArrivalsTextFormatterDefault(),
+            displayModelBuilder: DisplayModelBuilderDefault(),
             processingQueue: makeConcurrentQueue()
         )
     }
@@ -24,7 +24,7 @@ enum Builder {
 //        return ViewModelDispatchQueue(
 //            userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
 //            tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
-//            arrivalsTextFormatter: ArrivalsTextFormatterDefault(),
+//            displayModelBuilder: DisplayModelBuilderDefault(),
 //            processingQueue: DispatchQueue.global(qos: .userInitiated)
 //        )
 //    }

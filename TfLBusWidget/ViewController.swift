@@ -5,13 +5,24 @@ import NotificationCenter
 
 final class ViewController: UIViewController {
 
-    private lazy var arrivalsLabel: UILabel = {
-        let label = UILabel(frame: .zero)
+    private lazy var busStopLabel: UILabel = {
+        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .darkGray
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        label.isHidden = true
+        label.font = .systemFont(ofSize: 20)
+        return label
+    }()
+
+    private lazy var lineLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 18, weight: .light)
+        return label
+    }()
+
+    private lazy var arrivalsLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = .systemFont(ofSize: 36, weight: .light)
         return label
     }()
 
@@ -40,17 +51,30 @@ final class ViewController: UIViewController {
     }
 
     private func configureViewHierarchy() {
-        [activityIndicator, arrivalsLabel].forEach(view.addSubview)
+        [
+            busStopLabel,
+            lineLabel,
+            arrivalsLabel,
+            activityIndicator
+        ].forEach(view.addSubview)
     }
 
     private func configureLayout() {
         NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            busStopLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
+            busStopLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
         ])
         NSLayoutConstraint.activate([
-            arrivalsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            arrivalsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            lineLabel.topAnchor.constraint(equalTo: busStopLabel.bottomAnchor, constant: 4),
+            lineLabel.leadingAnchor.constraint(equalTo: busStopLabel.leadingAnchor)
+        ])
+        NSLayoutConstraint.activate([
+            arrivalsLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -8),
+            arrivalsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
 
@@ -63,16 +87,19 @@ extension ViewController: NCWidgetProviding {
 
     func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
         viewModel.getDisplayModel(
-            start: { [activityIndicator, arrivalsLabel] in
+            start: { [busStopLabel, lineLabel, arrivalsLabel, activityIndicator] in
+                busStopLabel.isHidden = true
+                lineLabel.isHidden = true
                 arrivalsLabel.isHidden = true
                 activityIndicator.startAnimating()
             },
-            completion: { [activityIndicator, arrivalsLabel] displayModel in
-                arrivalsLabel.text =
-                    "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
-                    + " - \(displayModel.line)" // TODO: add last line's stop! 🔥🔥🔥
-                    + "\n\(displayModel.arrivals)"
+            completion: { [busStopLabel, lineLabel, arrivalsLabel, activityIndicator] displayModel in
+                busStopLabel.text = "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
+                lineLabel.text = displayModel.line // TODO: add last line's stop! 🔥🔥🔥
+                arrivalsLabel.text = displayModel.arrivals
                 activityIndicator.stopAnimating()
+                busStopLabel.isHidden = false
+                lineLabel.isHidden = false
                 arrivalsLabel.isHidden = false
                 completionHandler(.newData)
             }

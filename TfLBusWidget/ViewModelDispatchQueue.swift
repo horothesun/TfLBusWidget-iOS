@@ -5,18 +5,18 @@ struct ViewModelDispatchQueue {
 
     private let userConfiguration: UserConfiguration
     private let tflWrapper: TfLWrapper
-    private let arrivalsTextFormatter: ArrivalsTextFormatter
+    private let displayModelBuilder: DisplayModelBuilder
     private let processingQueue: DispatchQueue
 
     init(
         userConfiguration: UserConfiguration,
         tflWrapper: TfLWrapper,
-        arrivalsTextFormatter: ArrivalsTextFormatter,
+        displayModelBuilder: DisplayModelBuilder,
         processingQueue: DispatchQueue
     ) {
         self.userConfiguration = userConfiguration
         self.tflWrapper = tflWrapper
-        self.arrivalsTextFormatter = arrivalsTextFormatter
+        self.displayModelBuilder = displayModelBuilder
         self.processingQueue = processingQueue
     }
 }
@@ -29,7 +29,7 @@ extension ViewModelDispatchQueue: ViewModel {
     ) {
         DispatchQueue.main.async(execute: start)
 
-        processingQueue.async { [userConfiguration, tflWrapper, arrivalsTextFormatter] in
+        processingQueue.async { [userConfiguration, tflWrapper, displayModelBuilder] in
             guard
                 let stopId = userConfiguration.stopId,
                 let lineId = userConfiguration.lineId
@@ -40,27 +40,13 @@ extension ViewModelDispatchQueue: ViewModel {
             }
 
             tflWrapper.busStop(stopId: stopId) { resultBusStop in
-
-                switch resultBusStop {
-
-                case .failure:
-                    let displayModel = DisplayModel.errorDisplayModel
+                tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId) { resultArrivals in
+                    let displayModel = displayModelBuilder.displayModelFrom(
+                        lineId: lineId,
+                        resultBusStop: resultBusStop,
+                        resultArrivalsInSeconds: resultArrivals
+                    )
                     DispatchQueue.main.async { completion(displayModel) }
-
-                case let .success(busStop):
-                    tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId) { resultArrivals in
-                        let arrivalsText = arrivalsTextFormatter.arrivalsText(
-                            from: resultArrivals,
-                            errorMessage: DisplayModel.errorMessage
-                        )
-                        let displayModel = DisplayModel(
-                            busStopCode: busStop.streetCode,
-                            busStopName: busStop.stopName,
-                            line: lineId.uppercased(),
-                            arrivals: arrivalsText
-                        )
-                        DispatchQueue.main.async { completion(displayModel) }
-                    }
                 }
             }
         }

@@ -14,9 +14,14 @@ protocol ViewModel {
     )
 }
 
+protocol DisplayModelBuilder {
+    func displayModelFrom(
+        lineId: String,
+        resultBusStop: Result<BusStop, TfLWrapperError>?,
+        resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?
+    ) -> DisplayModel
+}
+
 protocol ArrivalsTextFormatter {
-    func arrivalsText(
-        from resultArrivals: Result<[Int], TfLWrapperError>,
-        errorMessage: String
-    ) -> String
+    func arrivalsText(from arrivalsInSeconds: [Int]) -> String
 }
