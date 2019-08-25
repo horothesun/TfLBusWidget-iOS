@@ -1,8 +1,9 @@
 import TfLBusRepository
-import Dispatch
+//import Dispatch
 import Foundation
 
 enum Builder {
+
     static func makeViewModel() -> ViewModel {
         return ViewModelOperationQueue(
             userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),

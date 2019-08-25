@@ -57,7 +57,7 @@ extension ViewModelDispatchQueue: ViewModel {
                             busStopCode: busStop.streetCode,
                             busStopName: busStop.stopName,
                             line: lineId.uppercased(),
-                            arrivalsText: arrivalsText
+                            arrivals: arrivalsText
                         )
                         DispatchQueue.main.async { completion(displayModel) }
                     }

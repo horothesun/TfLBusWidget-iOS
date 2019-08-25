@@ -70,8 +70,8 @@ extension ViewController: NCWidgetProviding {
             completion: { [activityIndicator, arrivalsLabel] displayModel in
                 arrivalsLabel.text =
                     "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
-                    + " - \(displayModel.line)" // TODO: add last line stop! 🔥🔥🔥
-                    + "\n\(displayModel.arrivalsText)"
+                    + " - \(displayModel.line)" // TODO: add last line's stop! 🔥🔥🔥
+                    + "\n\(displayModel.arrivals)"
                 activityIndicator.stopAnimating()
                 arrivalsLabel.isHidden = false
                 completionHandler(.newData)

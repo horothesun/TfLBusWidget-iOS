@@ -30,13 +30,7 @@ final class MakeDisplayModelOperation: AsyncOperation {
 
         guard
             let resultBusStop = resultBusStop,
-            let resultArrivalsInSeconds = resultArrivalsInSeconds
-        else {
-            terminateWith(displayModel: .errorDisplayModel)
-            return
-        }
-
-        guard
+            let resultArrivalsInSeconds = resultArrivalsInSeconds,
             case let .success(busStop) = resultBusStop,
             case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
         else {
@@ -53,7 +47,7 @@ final class MakeDisplayModelOperation: AsyncOperation {
                 busStopCode: busStop.streetCode,
                 busStopName: busStop.stopName,
                 line: lineId.uppercased(),
-                arrivalsText: arrivalsText
+                arrivals: arrivalsText
             )
         )
     }

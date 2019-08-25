@@ -10,7 +10,7 @@ extension DisplayModel {
             busStopCode: undefinedText,
             busStopName: undefinedText,
             line: undefinedText,
-            arrivalsText: openAppMessage
+            arrivals: openAppMessage
         )
     }
 
@@ -19,7 +19,7 @@ extension DisplayModel {
             busStopCode: undefinedText,
             busStopName: undefinedText,
             line: undefinedText,
-            arrivalsText: errorMessage
+            arrivals: errorMessage
         )
     }
 }

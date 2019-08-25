@@ -4,7 +4,7 @@ struct DisplayModel {
     let busStopCode: String
     let busStopName: String
     let line: String
-    let arrivalsText: String
+    let arrivals: String
 }
 
 protocol ViewModel {
