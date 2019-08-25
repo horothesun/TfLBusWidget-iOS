@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B309F9C023130E5900EE4348 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309F9BF23130E5900EE4348 /* OutputOperation.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
@@ -31,11 +32,9 @@
 		B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B6231145E9008ACD7D /* Protocols.swift */; };
 		B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */; };
 		B31A36BB2311F437008ACD7D /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36BA2311F437008ACD7D /* AsyncOperation.swift */; };
-		B31A36BE2311FE07008ACD7D /* GetBusStopOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36BD2311FE07008ACD7D /* GetBusStopOperation.swift */; };
-		B31A36C0231200F7008ACD7D /* GetArrivalsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36BF231200F7008ACD7D /* GetArrivalsOperation.swift */; };
-		B31A36C223120227008ACD7D /* MakeDisplayModelOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C123120227008ACD7D /* MakeDisplayModelOperation.swift */; };
 		B31A36C42312B817008ACD7D /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */; };
 		B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */; };
+		B324A91B231314AE00639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A91A231314AE00639923 /* Input2OutputOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B309F9BF23130E5900EE4348 /* OutputOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfLBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TfLBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -127,11 +127,9 @@
 		B31A36B6231145E9008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
 		B31A36BA2311F437008ACD7D /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
-		B31A36BD2311FE07008ACD7D /* GetBusStopOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBusStopOperation.swift; sourceTree = "<group>"; };
-		B31A36BF231200F7008ACD7D /* GetArrivalsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArrivalsOperation.swift; sourceTree = "<group>"; };
-		B31A36C123120227008ACD7D /* MakeDisplayModelOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDisplayModelOperation.swift; sourceTree = "<group>"; };
 		B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
 		B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayModel+Extensions.swift"; sourceTree = "<group>"; };
+		B324A91A231314AE00639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,9 +288,8 @@
 			isa = PBXGroup;
 			children = (
 				B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */,
-				B31A36BD2311FE07008ACD7D /* GetBusStopOperation.swift */,
-				B31A36BF231200F7008ACD7D /* GetArrivalsOperation.swift */,
-				B31A36C123120227008ACD7D /* MakeDisplayModelOperation.swift */,
+				B309F9BF23130E5900EE4348 /* OutputOperation.swift */,
+				B324A91A231314AE00639923 /* Input2OutputOperation.swift */,
 				B31A36BA2311F437008ACD7D /* AsyncOperation.swift */,
 				B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */,
 			);
@@ -510,15 +507,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */,
-				B31A36C223120227008ACD7D /* MakeDisplayModelOperation.swift in Sources */,
+				B324A91B231314AE00639923 /* Input2OutputOperation.swift in Sources */,
+				B309F9C023130E5900EE4348 /* OutputOperation.swift in Sources */,
 				B31A36A423100F15008ACD7D /* ViewModelDispatchQueue.swift in Sources */,
 				B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */,
 				B31A36A623100FBE008ACD7D /* Builder.swift in Sources */,
 				B31A3650230F642B008ACD7D /* ViewController.swift in Sources */,
 				B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */,
 				B31A36C42312B817008ACD7D /* Operation+AddDependencies.swift in Sources */,
-				B31A36C0231200F7008ACD7D /* GetArrivalsOperation.swift in Sources */,
-				B31A36BE2311FE07008ACD7D /* GetBusStopOperation.swift in Sources */,
 				B31A36B52310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift in Sources */,
 				B31A36BB2311F437008ACD7D /* AsyncOperation.swift in Sources */,
 			);

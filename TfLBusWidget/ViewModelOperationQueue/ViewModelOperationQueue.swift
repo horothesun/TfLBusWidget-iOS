@@ -3,6 +3,8 @@ import Foundation
 
 final class ViewModelOperationQueue {
 
+    private typealias `Self` = ViewModelOperationQueue
+
     private let userConfiguration: UserConfiguration
     private let tflWrapper: TfLWrapper
     private let arrivalsTextFormatter: ArrivalsTextFormatter
@@ -37,21 +39,29 @@ extension ViewModelOperationQueue: ViewModel {
             return
         }
 
-        let getBusStop = GetBusStopOperation(stopId: stopId, tflWrapper: tflWrapper)
-        let getArrivals = GetArrivalsOperation(stopId: stopId, lineId: lineId, tflWrapper: tflWrapper)
-        let makeDisplayModel = MakeDisplayModelOperation(lineId: lineId, arrivalsTextFormatter: arrivalsTextFormatter)
-        let adapter = BlockOperation { [weak getBusStop, weak getArrivals, weak makeDisplayModel] in
-            makeDisplayModel?.resultBusStop = getBusStop?.resultBusStop
-            makeDisplayModel?.resultArrivalsInSeconds = getArrivals?.resultArrivalsInSeconds
+        let getBusStop = OutputOperation<Result<BusStop, TfLWrapperError>> { [tflWrapper] completion in
+            tflWrapper.busStop(stopId: stopId, completion: completion)
         }
-
+        let getArrivals = OutputOperation<Result<[Int], TfLWrapperError>> { [tflWrapper] completion in
+            tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId, completion: completion)
+        }
+        let makeDisplayModel = Self.makeDisplayModelOperation(
+            lineId: lineId,
+            getBusStop: getBusStop,
+            getArrivals: getArrivals,
+            arrivalsTextFormatter: arrivalsTextFormatter
+        )
         makeDisplayModel.completionBlock = { [weak makeDisplayModel] in
-            guard let displayModel = makeDisplayModel?.displayModel else {
+            guard let displayModel = makeDisplayModel?.output else {
                 OperationQueue.main.addOperation { completion(.errorDisplayModel) }
                 return
             }
 
             OperationQueue.main.addOperation { completion(displayModel) }
+        }
+        let adapter = BlockOperation { [weak getBusStop, weak getArrivals, weak makeDisplayModel] in
+            makeDisplayModel?.input1 = getBusStop?.output
+            makeDisplayModel?.input2 = getArrivals?.output
         }
 
         adapter.addDependencies(getBusStop, getArrivals)
@@ -60,6 +70,50 @@ extension ViewModelOperationQueue: ViewModel {
         processingQueue.addOperations(
             [getBusStop, getArrivals, adapter, makeDisplayModel],
             waitUntilFinished: false
+        )
+    }
+
+    private static func makeDisplayModelOperation(
+        lineId: String,
+        getBusStop: OutputOperation<Result<BusStop, TfLWrapperError>>,
+        getArrivals: OutputOperation<Result<[Int], TfLWrapperError>>,
+        arrivalsTextFormatter: ArrivalsTextFormatter
+    ) -> Input2OutputOperation<Result<BusStop, TfLWrapperError>, Result<[Int], TfLWrapperError>, DisplayModel> {
+        return .init { completion in
+            let displayModel = Self.displayModelFrom(
+                lineId: lineId,
+                resultBusStop: getBusStop.output,
+                resultArrivalsInSeconds: getArrivals.output,
+                with: arrivalsTextFormatter
+            )
+            completion(displayModel)
+        }
+    }
+
+    private static func displayModelFrom(
+        lineId: String,
+        resultBusStop: Result<BusStop, TfLWrapperError>?,
+        resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?,
+        with arrivalsTextFormatter: ArrivalsTextFormatter
+    ) -> DisplayModel {
+        guard
+            let resultBusStop = resultBusStop,
+            let resultArrivalsInSeconds = resultArrivalsInSeconds,
+            case let .success(busStop) = resultBusStop,
+            case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
+        else {
+            return .errorDisplayModel
+        }
+
+        let arrivalsText = arrivalsTextFormatter.arrivalsText(
+            from: .success(arrivalsInSeconds),
+            errorMessage: DisplayModel.errorMessage
+        )
+        return DisplayModel(
+            busStopCode: busStop.streetCode,
+            busStopName: busStop.stopName,
+            line: lineId.uppercased(),
+            arrivals: arrivalsText
         )
     }
 }
