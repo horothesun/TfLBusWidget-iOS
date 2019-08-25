@@ -4,16 +4,19 @@ import Foundation
 
 enum Builder {
     static func makeViewModel() -> ViewModel {
-        let operationQueue = OperationQueue()
-        operationQueue.maxConcurrentOperationCount = 4
-        operationQueue.qualityOfService = .userInitiated
-
         return ViewModelOperationQueue(
             userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
             tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
             arrivalsTextFormatter: ArrivalsTextFormatterDefault(),
-            processingQueue: operationQueue
+            processingQueue: makeConcurrentQueue()
         )
+    }
+
+    private static func makeConcurrentQueue() -> OperationQueue {
+        let operationQueue = OperationQueue()
+        operationQueue.maxConcurrentOperationCount = 4
+        operationQueue.qualityOfService = .userInitiated
+        return operationQueue
     }
 
 //    static func makeViewModel() -> ViewModel {
