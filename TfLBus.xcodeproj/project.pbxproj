@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B309F9C023130E5900EE4348 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B309F9BF23130E5900EE4348 /* OutputOperation.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
@@ -31,10 +30,12 @@
 		B31A36B52310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B42310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift */; };
 		B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B6231145E9008ACD7D /* Protocols.swift */; };
 		B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */; };
-		B31A36BB2311F437008ACD7D /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36BA2311F437008ACD7D /* AsyncOperation.swift */; };
-		B31A36C42312B817008ACD7D /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */; };
 		B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */; };
-		B324A91B231314AE00639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A91A231314AE00639923 /* Input2OutputOperation.swift */; };
+		B324A92B2313233900639923 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9272313233900639923 /* AsyncOperation.swift */; };
+		B324A92C2313233900639923 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9282313233900639923 /* OutputOperation.swift */; };
+		B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9292313233900639923 /* Operation+AddDependencies.swift */; };
+		B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A92A2313233900639923 /* Input2OutputOperation.swift */; };
+		B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,10 +93,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B324A91E2313228E00639923 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B309F9BF23130E5900EE4348 /* OutputOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfLBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TfLBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -126,10 +135,12 @@
 		B31A36B42310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsTextFormatterDefault.swift; sourceTree = "<group>"; };
 		B31A36B6231145E9008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
-		B31A36BA2311F437008ACD7D /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
-		B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
 		B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayModel+Extensions.swift"; sourceTree = "<group>"; };
-		B324A91A231314AE00639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
+		B324A9202313228E00639923 /* libTfLBusOperations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusOperations.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B324A9272313233900639923 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		B324A9282313233900639923 /* OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
+		B324A9292313233900639923 /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
+		B324A92A2313233900639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31A369623100AA0008ACD7D /* libTfLBusRepository.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324A91D2313228E00639923 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +202,7 @@
 				B31A364E230F642B008ACD7D /* TfLBusWidget */,
 				B31A368723100A76008ACD7D /* TfLBusRepository */,
 				B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */,
+				B324A9212313228E00639923 /* TfLBusOperations */,
 				B31A364B230F642B008ACD7D /* Frameworks */,
 				B31A3624230F62BD008ACD7D /* Products */,
 			);
@@ -196,6 +216,7 @@
 				B31A364A230F642A008ACD7D /* TfLBusWidget.appex */,
 				B31A368623100A76008ACD7D /* libTfLBusRepository.a */,
 				B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */,
+				B324A9202313228E00639923 /* libTfLBusOperations.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,7 +254,7 @@
 				B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */,
 				B31A36B42310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift */,
 				B31A36A323100F15008ACD7D /* ViewModelDispatchQueue.swift */,
-				B31A36BC2311F96F008ACD7D /* ViewModelOperationQueue */,
+				B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */,
 				B31A364F230F642B008ACD7D /* ViewController.swift */,
 				B31A36A823102094008ACD7D /* TfLBusWidget.entitlements */,
 				B31A3654230F642B008ACD7D /* Info.plist */,
@@ -284,16 +305,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		B31A36BC2311F96F008ACD7D /* ViewModelOperationQueue */ = {
+		B324A9212313228E00639923 /* TfLBusOperations */ = {
 			isa = PBXGroup;
 			children = (
-				B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */,
-				B309F9BF23130E5900EE4348 /* OutputOperation.swift */,
-				B324A91A231314AE00639923 /* Input2OutputOperation.swift */,
-				B31A36BA2311F437008ACD7D /* AsyncOperation.swift */,
-				B31A36C32312B817008ACD7D /* Operation+AddDependencies.swift */,
+				B324A92A2313233900639923 /* Input2OutputOperation.swift */,
+				B324A9282313233900639923 /* OutputOperation.swift */,
+				B324A9272313233900639923 /* AsyncOperation.swift */,
+				B324A9292313233900639923 /* Operation+AddDependencies.swift */,
 			);
-			path = ViewModelOperationQueue;
+			path = TfLBusOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +409,23 @@
 			productReference = B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B324A91F2313228E00639923 /* TfLBusOperations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "TfLBusOperations" */;
+			buildPhases = (
+				B324A91C2313228E00639923 /* Sources */,
+				B324A91D2313228E00639923 /* Frameworks */,
+				B324A91E2313228E00639923 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TfLBusOperations;
+			productName = TfLBusOperations;
+			productReference = B324A9202313228E00639923 /* libTfLBusOperations.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -425,6 +462,10 @@
 					B31A369023100AA0008ACD7D = {
 						CreatedOnToolsVersion = 10.3;
 					};
+					B324A91F2313228E00639923 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
 				};
 			};
 			buildConfigurationList = B31A361E230F62BD008ACD7D /* Build configuration list for PBXProject "TfLBus" */;
@@ -445,6 +486,7 @@
 				B31A3649230F642A008ACD7D /* TfLBusWidget */,
 				B31A368523100A76008ACD7D /* TfLBusRepository */,
 				B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */,
+				B324A91F2313228E00639923 /* TfLBusOperations */,
 			);
 		};
 /* End PBXProject section */
@@ -507,16 +549,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */,
-				B324A91B231314AE00639923 /* Input2OutputOperation.swift in Sources */,
-				B309F9C023130E5900EE4348 /* OutputOperation.swift in Sources */,
 				B31A36A423100F15008ACD7D /* ViewModelDispatchQueue.swift in Sources */,
 				B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */,
 				B31A36A623100FBE008ACD7D /* Builder.swift in Sources */,
 				B31A3650230F642B008ACD7D /* ViewController.swift in Sources */,
 				B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */,
-				B31A36C42312B817008ACD7D /* Operation+AddDependencies.swift in Sources */,
 				B31A36B52310A4BA008ACD7D /* ArrivalsTextFormatterDefault.swift in Sources */,
-				B31A36BB2311F437008ACD7D /* AsyncOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +574,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324A91C2313228E00639923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B324A92C2313233900639923 /* OutputOperation.swift in Sources */,
+				B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */,
+				B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */,
+				B324A92B2313233900639923 /* AsyncOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +920,45 @@
 			};
 			name = Release;
 		};
+		B324A9252313228E00639923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B324A9262313228E00639923 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -924,6 +1012,15 @@
 			buildConfigurations = (
 				B31A369A23100AA0008ACD7D /* Debug */,
 				B31A369B23100AA0008ACD7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "TfLBusOperations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B324A9252313228E00639923 /* Debug */,
+				B324A9262313228E00639923 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

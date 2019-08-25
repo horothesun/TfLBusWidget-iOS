@@ -1,6 +1,6 @@
-import TfLBusRepository
-//import Dispatch
 import Foundation
+//import Dispatch
+import TfLBusRepository
 
 enum Builder {
 
