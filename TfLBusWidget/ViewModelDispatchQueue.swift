@@ -50,19 +50,9 @@ extension ViewModelDispatchQueue: ViewModel {
                         resultBusStop: resultBusStop,
                         resultArrivalsInSeconds: resultArrivals
                     )
-                    DispatchQueue.main.async(
-                        execute: Self.completion(for: resultDisplayModel, success, failure)
-                    )
+                    DispatchQueue.main.async { resultDisplayModel.fold(success: success, failure: failure) }
                 }
             }
         }
-    }
-
-    private static func completion(
-        for resultDisplayModel: Result<DisplayModel, ErrorDisplayModel>,
-        _ success: @escaping (DisplayModel) -> Void,
-        _ failure: @escaping (ErrorDisplayModel) -> Void
-    ) -> () -> Void {
-        return { resultDisplayModel.fold(success: success, failure: failure) }
     }
 }

@@ -98,18 +98,8 @@ extension ViewModelOperationQueue: ViewModel {
                 return
             }
 
-            OperationQueue.main.addOperation(
-                completion(for: resultDisplayModel, success, failure)
-            )
+            OperationQueue.main.addOperation { resultDisplayModel.fold(success: success, failure: failure) }
         }
         return makeDisplayModel
-    }
-
-    private static func completion(
-        for resultDisplayModel: ResultDisplayModel,
-        _ success: @escaping (DisplayModel) -> Void,
-        _ failure: @escaping (ErrorDisplayModel) -> Void
-    ) -> () -> Void {
-        return { resultDisplayModel.fold(success: success, failure: failure) }
     }
 }
