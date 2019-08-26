@@ -1,3 +1,4 @@
+import Foundation
 import TfLBusRepository
 
 struct DisplayModel {
@@ -7,10 +8,13 @@ struct DisplayModel {
     let arrivals: String
 }
 
+enum WidgetError: Error { case error(message: String) }
+
 protocol ViewModel {
     func getDisplayModel(
         start: @escaping () -> Void,
-        completion: @escaping (DisplayModel) -> Void
+        success: @escaping (DisplayModel) -> Void,
+        failure: @escaping (String) -> Void
     )
 }
 
@@ -19,7 +23,7 @@ protocol DisplayModelBuilder {
         lineId: String,
         resultBusStop: Result<BusStop, TfLWrapperError>?,
         resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?
-    ) -> DisplayModel
+    ) -> Result<DisplayModel, WidgetError>
 }
 
 protocol ArrivalsTextFormatter {

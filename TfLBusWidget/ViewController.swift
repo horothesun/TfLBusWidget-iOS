@@ -5,6 +5,13 @@ import NotificationCenter
 
 final class ViewController: UIViewController {
 
+    private lazy var errorLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .darkGray
+        return label
+    }()
+
     private lazy var busStopLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -52,6 +59,7 @@ final class ViewController: UIViewController {
 
     private func configureViewHierarchy() {
         [
+            errorLabel,
             busStopLabel,
             lineLabel,
             arrivalsLabel,
@@ -60,6 +68,10 @@ final class ViewController: UIViewController {
     }
 
     private func configureLayout() {
+        NSLayoutConstraint.activate([
+            errorLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            errorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
         NSLayoutConstraint.activate([
             busStopLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 8),
             busStopLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16)
@@ -87,20 +99,35 @@ extension ViewController: NCWidgetProviding {
 
     func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
         viewModel.getDisplayModel(
-            start: { [busStopLabel, lineLabel, arrivalsLabel, activityIndicator] in
+            start: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] in
+                errorLabel.isHidden = true
                 busStopLabel.isHidden = true
                 lineLabel.isHidden = true
                 arrivalsLabel.isHidden = true
                 activityIndicator.startAnimating()
             },
-            completion: { [busStopLabel, lineLabel, arrivalsLabel, activityIndicator] displayModel in
+            success: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] displayModel in
+                errorLabel.text = nil
                 busStopLabel.text = "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
                 lineLabel.text = displayModel.line // TODO: add last line's stop! 🔥🔥🔥
                 arrivalsLabel.text = displayModel.arrivals
                 activityIndicator.stopAnimating()
+                errorLabel.isHidden = true
                 busStopLabel.isHidden = false
                 lineLabel.isHidden = false
                 arrivalsLabel.isHidden = false
+                completionHandler(.newData)
+            },
+            failure: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] message in
+                errorLabel.text = message
+                busStopLabel.text = nil
+                lineLabel.text = nil
+                arrivalsLabel.text = nil
+                activityIndicator.stopAnimating()
+                errorLabel.isHidden = false
+                busStopLabel.isHidden = true
+                lineLabel.isHidden = true
+                arrivalsLabel.isHidden = true
                 completionHandler(.newData)
             }
         )

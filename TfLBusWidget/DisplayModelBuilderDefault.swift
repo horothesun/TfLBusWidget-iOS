@@ -1,10 +1,12 @@
+import Foundation
 import TfLBusRepository
 
 struct DisplayModelBuilderDefault: DisplayModelBuilder {
 
     private typealias `Self` = DisplayModelBuilderDefault
 
-    private static let noArrivalsAvailableText = "N/A"
+    private static let errorMessage = "Oops, an error occurred 🙏"
+    private static let noArrivalsAvailableText = "NA"
     private static let dueText = "Due"
     private static let arrivalsSeparatorText = ", "
 
@@ -12,21 +14,23 @@ struct DisplayModelBuilderDefault: DisplayModelBuilder {
         lineId: String,
         resultBusStop: Result<BusStop, TfLWrapperError>?,
         resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?
-    ) -> DisplayModel {
+    ) -> Result<DisplayModel, WidgetError> {
         guard
             let resultBusStop = resultBusStop,
             let resultArrivalsInSeconds = resultArrivalsInSeconds,
             case let .success(busStop) = resultBusStop,
             case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
         else {
-            return .errorDisplayModel
+            return .failure(.error(message: Self.errorMessage))
         }
 
-        return DisplayModel(
-            busStopCode: busStop.streetCode,
-            busStopName: busStop.stopName,
-            line: lineId.uppercased(),
-            arrivals: Self.arrivalsText(from: arrivalsInSeconds)
+        return .success(
+            .init(
+                busStopCode: busStop.streetCode,
+                busStopName: busStop.stopName,
+                line: lineId.uppercased(),
+                arrivals: Self.arrivalsText(from: arrivalsInSeconds)
+            )
         )
     }
 

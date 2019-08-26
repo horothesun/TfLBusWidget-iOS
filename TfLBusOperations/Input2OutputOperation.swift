@@ -7,9 +7,9 @@ public final class Input2OutputOperation<I1, I2, O>: AsyncOperation {
     // output
     public var output: O?
 
-    private let wrapped: (@escaping (O) -> Void) -> Void
+    private let wrapped: (_ recordOutput: @escaping (O) -> Void) -> Void
 
-    public init(wrapping: @escaping (@escaping (O) -> Void) -> Void) {
+    public init(wrapping: @escaping (_ recordOutput: @escaping (O) -> Void) -> Void) {
         self.wrapped = wrapping
     }
 

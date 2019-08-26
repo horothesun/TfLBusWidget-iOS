@@ -29,13 +29,13 @@
 		B31A36B3231044D2008ACD7D /* HttpClientURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */; };
 		B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B6231145E9008ACD7D /* Protocols.swift */; };
 		B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */; };
-		B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */; };
 		B324A92B2313233900639923 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9272313233900639923 /* AsyncOperation.swift */; };
 		B324A92C2313233900639923 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9282313233900639923 /* OutputOperation.swift */; };
 		B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9292313233900639923 /* Operation+AddDependencies.swift */; };
 		B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A92A2313233900639923 /* Input2OutputOperation.swift */; };
 		B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
 		B324A9312313355600639923 /* DisplayModelBuilderDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */; };
+		B324A9332313692E00639923 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9322313692E00639923 /* Result+Fold.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,13 +134,13 @@
 		B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientURLSession.swift; sourceTree = "<group>"; };
 		B31A36B6231145E9008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
-		B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DisplayModel+Extensions.swift"; sourceTree = "<group>"; };
 		B324A9202313228E00639923 /* libTfLBusOperations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusOperations.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B324A9272313233900639923 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		B324A9282313233900639923 /* OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
 		B324A9292313233900639923 /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
 		B324A92A2313233900639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
 		B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModelBuilderDefault.swift; sourceTree = "<group>"; };
+		B324A9322313692E00639923 /* Result+Fold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Fold.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,11 +251,11 @@
 			children = (
 				B31A36B6231145E9008ACD7D /* Protocols.swift */,
 				B31A36A523100FBE008ACD7D /* Builder.swift */,
-				B31A36C52312BF47008ACD7D /* DisplayModel+Extensions.swift */,
 				B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */,
 				B31A36A323100F15008ACD7D /* ViewModelDispatchQueue.swift */,
 				B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */,
 				B31A364F230F642B008ACD7D /* ViewController.swift */,
+				B324A9322313692E00639923 /* Result+Fold.swift */,
 				B31A36A823102094008ACD7D /* TfLBusWidget.entitlements */,
 				B31A3654230F642B008ACD7D /* Info.plist */,
 			);
@@ -550,11 +550,11 @@
 			files = (
 				B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */,
 				B31A36A423100F15008ACD7D /* ViewModelDispatchQueue.swift in Sources */,
+				B324A9332313692E00639923 /* Result+Fold.swift in Sources */,
 				B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */,
 				B31A36A623100FBE008ACD7D /* Builder.swift in Sources */,
 				B324A9312313355600639923 /* DisplayModelBuilderDefault.swift in Sources */,
 				B31A3650230F642B008ACD7D /* ViewController.swift in Sources */,
-				B31A36C62312BF47008ACD7D /* DisplayModel+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

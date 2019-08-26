@@ -2,12 +2,13 @@ import Foundation
 import TfLBusOperations
 import TfLBusRepository
 
-final class ViewModelOperationQueue {
+struct ViewModelOperationQueue {
 
     private typealias `Self` = ViewModelOperationQueue
     private typealias ResultBusStop = Result<BusStop, TfLWrapperError>
     private typealias ResultArrivals = Result<[Int], TfLWrapperError>
-    private typealias MakeDisplayModelOperation = Input2OutputOperation<ResultBusStop, ResultArrivals, DisplayModel>
+    private typealias ResultDisplayModel = Result<DisplayModel, WidgetError>
+    private typealias MakeDisplayModelOperation = Input2OutputOperation<ResultBusStop, ResultArrivals, ResultDisplayModel>
 
     private let userConfiguration: UserConfiguration
     private let tflWrapper: TfLWrapper
@@ -29,9 +30,13 @@ final class ViewModelOperationQueue {
 
 extension ViewModelOperationQueue: ViewModel {
 
+    private static var openAppMessage: String { return "Open the 'TfL Bus' app 👍" }
+    private static var errorMessage: String { return "Oops, an error occurred 🙏" }
+
     func getDisplayModel(
         start: @escaping () -> Void,
-        completion: @escaping (DisplayModel) -> Void
+        success: @escaping (DisplayModel) -> Void,
+        failure: @escaping (String) -> Void
     ) {
         OperationQueue.main.addOperation(start)
 
@@ -39,21 +44,22 @@ extension ViewModelOperationQueue: ViewModel {
             let stopId = userConfiguration.stopId,
             let lineId = userConfiguration.lineId
         else {
-            OperationQueue.main.addOperation { completion(.openAppDisplayModel) }
+            OperationQueue.main.addOperation { failure(Self.openAppMessage) }
             return
         }
 
-        let getBusStop = OutputOperation<ResultBusStop> { [tflWrapper] completion in
-            tflWrapper.busStop(stopId: stopId, completion: completion)
+        let getBusStop = OutputOperation<ResultBusStop> { [tflWrapper] recordOutput in
+            tflWrapper.busStop(stopId: stopId, completion: recordOutput)
         }
-        let getArrivals = OutputOperation<ResultArrivals> { [tflWrapper] completion in
-            tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId, completion: completion)
+        let getArrivals = OutputOperation<ResultArrivals> { [tflWrapper] recordOutput in
+            tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId, completion: recordOutput)
         }
         let makeDisplayModel = Self.makeDisplayModelOperation(
             lineId: lineId,
             getBusStop: getBusStop,
             getArrivals: getArrivals,
-            completion: completion,
+            success: success,
+            failure: failure,
             displayModelBuilder: displayModelBuilder
         )
         let adapter = BlockOperation { [weak getBusStop, weak getArrivals, weak makeDisplayModel] in
@@ -74,25 +80,43 @@ extension ViewModelOperationQueue: ViewModel {
         lineId: String,
         getBusStop: OutputOperation<ResultBusStop>,
         getArrivals: OutputOperation<ResultArrivals>,
-        completion: @escaping (DisplayModel) -> Void,
+        success: @escaping (DisplayModel) -> Void,
+        failure: @escaping (String) -> Void,
         displayModelBuilder: DisplayModelBuilder
     ) -> MakeDisplayModelOperation {
-        let makeDisplayModel = MakeDisplayModelOperation { completion in
-            let displayModel = displayModelBuilder.displayModelFrom(
+        let makeDisplayModel = MakeDisplayModelOperation { recordOutput in
+            let resultDisplayModel = displayModelBuilder.displayModelFrom(
                 lineId: lineId,
                 resultBusStop: getBusStop.output,
                 resultArrivalsInSeconds: getArrivals.output
             )
-            completion(displayModel)
+            recordOutput(resultDisplayModel)
         }
         makeDisplayModel.completionBlock = { [weak makeDisplayModel] in
-            guard let displayModel = makeDisplayModel?.output else {
-                OperationQueue.main.addOperation { completion(.errorDisplayModel) }
+            guard let resultDisplayModel = makeDisplayModel?.output else {
+                OperationQueue.main.addOperation { failure(errorMessage) }
                 return
             }
 
-            OperationQueue.main.addOperation { completion(displayModel) }
+            OperationQueue.main.addOperation(
+                completion(for: resultDisplayModel, success, failure)
+            )
         }
         return makeDisplayModel
+    }
+
+    private static func completion(
+        for resultDisplayModel: Result<DisplayModel, WidgetError>,
+        _ success: @escaping (DisplayModel) -> Void,
+        _ failure: @escaping (String) -> Void
+    ) -> () -> Void {
+        return {
+            resultDisplayModel.fold(
+                success: success,
+                failure: { error in
+                    switch error { case let .error(message): return failure(message) }
+                }
+            )
+        }
     }
 }
