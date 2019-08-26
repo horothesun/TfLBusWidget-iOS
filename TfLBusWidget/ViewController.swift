@@ -99,35 +99,35 @@ extension ViewController: NCWidgetProviding {
 
     func widgetPerformUpdate(completionHandler: @escaping (NCUpdateResult) -> Void) {
         viewModel.getDisplayModel(
-            start: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] in
-                errorLabel.isHidden = true
-                busStopLabel.isHidden = true
-                lineLabel.isHidden = true
-                arrivalsLabel.isHidden = true
-                activityIndicator.startAnimating()
+            start: { [weak self] in
+                self?.errorLabel.isHidden = true
+                self?.busStopLabel.isHidden = true
+                self?.lineLabel.isHidden = true
+                self?.arrivalsLabel.isHidden = true
+                self?.activityIndicator.startAnimating()
             },
-            success: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] displayModel in
-                errorLabel.text = nil
-                busStopLabel.text = "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
-                lineLabel.text = displayModel.line // TODO: add last line's stop! 🔥🔥🔥
-                arrivalsLabel.text = displayModel.arrivals
-                activityIndicator.stopAnimating()
-                errorLabel.isHidden = true
-                busStopLabel.isHidden = false
-                lineLabel.isHidden = false
-                arrivalsLabel.isHidden = false
+            success: { [weak self] displayModel in
+                self?.errorLabel.text = nil
+                self?.busStopLabel.text = "\(displayModel.busStopCode) - \(displayModel.busStopName.capitalized)"
+                self?.lineLabel.text = displayModel.line // TODO: add last line's stop! 🔥🔥🔥
+                self?.arrivalsLabel.text = displayModel.arrivals
+                self?.activityIndicator.stopAnimating()
+                self?.errorLabel.isHidden = true
+                self?.busStopLabel.isHidden = false
+                self?.lineLabel.isHidden = false
+                self?.arrivalsLabel.isHidden = false
                 completionHandler(.newData)
             },
-            failure: { [errorLabel, busStopLabel, lineLabel, arrivalsLabel, activityIndicator] message in
-                errorLabel.text = message
-                busStopLabel.text = nil
-                lineLabel.text = nil
-                arrivalsLabel.text = nil
-                activityIndicator.stopAnimating()
-                errorLabel.isHidden = false
-                busStopLabel.isHidden = true
-                lineLabel.isHidden = true
-                arrivalsLabel.isHidden = true
+            failure: { [weak self] errorDisplayModel in
+                self?.errorLabel.text = errorDisplayModel.message
+                self?.busStopLabel.text = nil
+                self?.lineLabel.text = nil
+                self?.arrivalsLabel.text = nil
+                self?.activityIndicator.stopAnimating()
+                self?.errorLabel.isHidden = false
+                self?.busStopLabel.isHidden = true
+                self?.lineLabel.isHidden = true
+                self?.arrivalsLabel.isHidden = true
                 completionHandler(.newData)
             }
         )

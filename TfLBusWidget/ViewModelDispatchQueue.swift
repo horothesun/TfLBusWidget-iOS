@@ -30,7 +30,7 @@ extension ViewModelDispatchQueue: ViewModel {
     func getDisplayModel(
         start:  @escaping () -> Void,
         success: @escaping (DisplayModel) -> Void,
-        failure: @escaping (String) -> Void
+        failure: @escaping (ErrorDisplayModel) -> Void
     ) {
         DispatchQueue.main.async(execute: start)
 
@@ -39,7 +39,7 @@ extension ViewModelDispatchQueue: ViewModel {
                 let stopId = userConfiguration.stopId,
                 let lineId = userConfiguration.lineId
             else {
-                DispatchQueue.main.async { failure(Self.openAppMessage) }
+                DispatchQueue.main.async { failure(.init(message: Self.openAppMessage)) }
                 return
             }
 
@@ -59,17 +59,10 @@ extension ViewModelDispatchQueue: ViewModel {
     }
 
     private static func completion(
-        for resultDisplayModel: Result<DisplayModel, WidgetError>,
+        for resultDisplayModel: Result<DisplayModel, ErrorDisplayModel>,
         _ success: @escaping (DisplayModel) -> Void,
-        _ failure: @escaping (String) -> Void
+        _ failure: @escaping (ErrorDisplayModel) -> Void
     ) -> () -> Void {
-        return {
-            resultDisplayModel.fold(
-                success: success,
-                failure: { error in
-                    switch error { case let .error(message): return failure(message) }
-                }
-            )
-        }
+        return { resultDisplayModel.fold(success: success, failure: failure) }
     }
 }

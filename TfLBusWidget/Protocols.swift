@@ -8,13 +8,15 @@ struct DisplayModel {
     let arrivals: String
 }
 
-enum WidgetError: Error { case error(message: String) }
+struct ErrorDisplayModel: Error {
+    let message: String
+}
 
 protocol ViewModel {
     func getDisplayModel(
         start: @escaping () -> Void,
         success: @escaping (DisplayModel) -> Void,
-        failure: @escaping (String) -> Void
+        failure: @escaping (ErrorDisplayModel) -> Void
     )
 }
 
@@ -23,7 +25,7 @@ protocol DisplayModelBuilder {
         lineId: String,
         resultBusStop: Result<BusStop, TfLWrapperError>?,
         resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?
-    ) -> Result<DisplayModel, WidgetError>
+    ) -> Result<DisplayModel, ErrorDisplayModel>
 }
 
 protocol ArrivalsTextFormatter {

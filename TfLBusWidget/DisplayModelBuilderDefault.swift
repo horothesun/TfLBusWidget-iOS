@@ -14,14 +14,14 @@ struct DisplayModelBuilderDefault: DisplayModelBuilder {
         lineId: String,
         resultBusStop: Result<BusStop, TfLWrapperError>?,
         resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?
-    ) -> Result<DisplayModel, WidgetError> {
+    ) -> Result<DisplayModel, ErrorDisplayModel> {
         guard
             let resultBusStop = resultBusStop,
             let resultArrivalsInSeconds = resultArrivalsInSeconds,
             case let .success(busStop) = resultBusStop,
             case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
         else {
-            return .failure(.error(message: Self.errorMessage))
+            return .failure(.init(message: Self.errorMessage))
         }
 
         return .success(

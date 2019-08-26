@@ -7,7 +7,7 @@ struct ViewModelOperationQueue {
     private typealias `Self` = ViewModelOperationQueue
     private typealias ResultBusStop = Result<BusStop, TfLWrapperError>
     private typealias ResultArrivals = Result<[Int], TfLWrapperError>
-    private typealias ResultDisplayModel = Result<DisplayModel, WidgetError>
+    private typealias ResultDisplayModel = Result<DisplayModel, ErrorDisplayModel>
     private typealias MakeDisplayModelOperation = Input2OutputOperation<ResultBusStop, ResultArrivals, ResultDisplayModel>
 
     private let userConfiguration: UserConfiguration
@@ -36,7 +36,7 @@ extension ViewModelOperationQueue: ViewModel {
     func getDisplayModel(
         start: @escaping () -> Void,
         success: @escaping (DisplayModel) -> Void,
-        failure: @escaping (String) -> Void
+        failure: @escaping (ErrorDisplayModel) -> Void
     ) {
         OperationQueue.main.addOperation(start)
 
@@ -44,7 +44,7 @@ extension ViewModelOperationQueue: ViewModel {
             let stopId = userConfiguration.stopId,
             let lineId = userConfiguration.lineId
         else {
-            OperationQueue.main.addOperation { failure(Self.openAppMessage) }
+            OperationQueue.main.addOperation { failure(.init(message: Self.openAppMessage)) }
             return
         }
 
@@ -81,7 +81,7 @@ extension ViewModelOperationQueue: ViewModel {
         getBusStop: OutputOperation<ResultBusStop>,
         getArrivals: OutputOperation<ResultArrivals>,
         success: @escaping (DisplayModel) -> Void,
-        failure: @escaping (String) -> Void,
+        failure: @escaping (ErrorDisplayModel) -> Void,
         displayModelBuilder: DisplayModelBuilder
     ) -> MakeDisplayModelOperation {
         let makeDisplayModel = MakeDisplayModelOperation { recordOutput in
@@ -94,7 +94,7 @@ extension ViewModelOperationQueue: ViewModel {
         }
         makeDisplayModel.completionBlock = { [weak makeDisplayModel] in
             guard let resultDisplayModel = makeDisplayModel?.output else {
-                OperationQueue.main.addOperation { failure(errorMessage) }
+                OperationQueue.main.addOperation { failure(.init(message: errorMessage)) }
                 return
             }
 
@@ -106,17 +106,10 @@ extension ViewModelOperationQueue: ViewModel {
     }
 
     private static func completion(
-        for resultDisplayModel: Result<DisplayModel, WidgetError>,
+        for resultDisplayModel: ResultDisplayModel,
         _ success: @escaping (DisplayModel) -> Void,
-        _ failure: @escaping (String) -> Void
+        _ failure: @escaping (ErrorDisplayModel) -> Void
     ) -> () -> Void {
-        return {
-            resultDisplayModel.fold(
-                success: success,
-                failure: { error in
-                    switch error { case let .error(message): return failure(message) }
-                }
-            )
-        }
+        return { resultDisplayModel.fold(success: success, failure: failure) }
     }
 }
