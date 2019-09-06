@@ -43,6 +43,7 @@ extension ViewModelDispatchQueue: ViewModel {
                 return
             }
 
+            // sequential calls ☹️
             tflWrapper.busStop(stopId: stopId) { resultBusStop in
                 tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId) { resultArrivals in
                     let resultDisplayModel = displayModelBuilder.displayModelFrom(

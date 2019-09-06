@@ -36,6 +36,11 @@
 		B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
 		B324A9312313355600639923 /* DisplayModelBuilderDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */; };
 		B324A9332313692E00639923 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9322313692E00639923 /* Result+Fold.swift */; };
+		B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */; };
+		B3FC9FDD2322FF6900E21E86 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
+		B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */; };
+		B3FC9FE8232313CE00E21E86 /* Operation+AddDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */; };
+		B3FC9FEA232318B800E21E86 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B31A368523100A76008ACD7D;
 			remoteInfo = TfLBusRepository;
+		};
+		B3FC9FDE2322FF6900E21E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31A361B230F62BD008ACD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B324A91F2313228E00639923;
+			remoteInfo = TfLBusOperations;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -141,6 +153,12 @@
 		B324A92A2313233900639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
 		B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModelBuilderDefault.swift; sourceTree = "<group>"; };
 		B324A9322313692E00639923 /* Result+Fold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Fold.swift"; sourceTree = "<group>"; };
+		B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperationTests.swift; sourceTree = "<group>"; };
+		B3FC9FDC2322FF6900E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperationTests.swift; sourceTree = "<group>"; };
+		B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependenciesTests.swift"; sourceTree = "<group>"; };
+		B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +209,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FC9FD52322FF6900E21E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC9FDD2322FF6900E21E86 /* libTfLBusOperations.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -203,6 +229,7 @@
 				B31A368723100A76008ACD7D /* TfLBusRepository */,
 				B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */,
 				B324A9212313228E00639923 /* TfLBusOperations */,
+				B3FC9FD92322FF6900E21E86 /* TfLBusOperationsTests */,
 				B31A364B230F642B008ACD7D /* Frameworks */,
 				B31A3624230F62BD008ACD7D /* Products */,
 			);
@@ -217,6 +244,7 @@
 				B31A368623100A76008ACD7D /* libTfLBusRepository.a */,
 				B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */,
 				B324A9202313228E00639923 /* libTfLBusOperations.a */,
+				B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				B31A363D230F62BF008ACD7D /* Info.plist */,
+				B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */,
 			);
 			path = TfLBusTests;
 			sourceTree = "<group>";
@@ -314,6 +343,17 @@
 				B324A9292313233900639923 /* Operation+AddDependencies.swift */,
 			);
 			path = TfLBusOperations;
+			sourceTree = "<group>";
+		};
+		B3FC9FD92322FF6900E21E86 /* TfLBusOperationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */,
+				B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */,
+				B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */,
+				B3FC9FDC2322FF6900E21E86 /* Info.plist */,
+			);
+			path = TfLBusOperationsTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +466,24 @@
 			productReference = B324A9202313228E00639923 /* libTfLBusOperations.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B3FC9FD72322FF6900E21E86 /* TfLBusOperationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "TfLBusOperationsTests" */;
+			buildPhases = (
+				B3FC9FD42322FF6900E21E86 /* Sources */,
+				B3FC9FD52322FF6900E21E86 /* Frameworks */,
+				B3FC9FD62322FF6900E21E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3FC9FDF2322FF6900E21E86 /* PBXTargetDependency */,
+			);
+			name = TfLBusOperationsTests;
+			productName = TfLBusOperationsTests;
+			productReference = B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -446,6 +504,7 @@
 					};
 					B31A3636230F62BF008ACD7D = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						TestTargetID = B31A3622230F62BD008ACD7D;
 					};
 					B31A3649230F642A008ACD7D = {
@@ -465,6 +524,9 @@
 					B324A91F2313228E00639923 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
+					};
+					B3FC9FD72322FF6900E21E86 = {
+						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
@@ -487,6 +549,7 @@
 				B31A368523100A76008ACD7D /* TfLBusRepository */,
 				B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */,
 				B324A91F2313228E00639923 /* TfLBusOperations */,
+				B3FC9FD72322FF6900E21E86 /* TfLBusOperationsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -522,6 +585,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FC9FD62322FF6900E21E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -541,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FC9FEA232318B800E21E86 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +659,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FC9FD42322FF6900E21E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */,
+				B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */,
+				B3FC9FE8232313CE00E21E86 /* Operation+AddDependenciesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -605,6 +686,11 @@
 			isa = PBXTargetDependency;
 			target = B31A368523100A76008ACD7D /* TfLBusRepository */;
 			targetProxy = B31A369723100AA0008ACD7D /* PBXContainerItemProxy */;
+		};
+		B3FC9FDF2322FF6900E21E86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B324A91F2313228E00639923 /* TfLBusOperations */;
+			targetProxy = B3FC9FDE2322FF6900E21E86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -750,6 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "TfL Bus";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -770,6 +857,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "TfL Bus";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -781,6 +869,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
 				INFOPLIST_FILE = TfLBusTests/Info.plist;
@@ -791,9 +880,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TfLBus.app/TfLBus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TfL Bus.app/TfL Bus";
 			};
 			name = Debug;
 		};
@@ -802,6 +892,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
 				INFOPLIST_FILE = TfLBusTests/Info.plist;
@@ -814,7 +905,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TfLBus.app/TfLBus";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TfL Bus.app/TfL Bus";
 			};
 			name = Release;
 		};
@@ -959,6 +1050,42 @@
 			};
 			name = Release;
 		};
+		B3FC9FE02322FF6900E21E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = TfLBusOperationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusOperationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3FC9FE12322FF6900E21E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = TfLBusOperationsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusOperationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1021,6 +1148,15 @@
 			buildConfigurations = (
 				B324A9252313228E00639923 /* Debug */,
 				B324A9262313228E00639923 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "TfLBusOperationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FC9FE02322FF6900E21E86 /* Debug */,
+				B3FC9FE12322FF6900E21E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

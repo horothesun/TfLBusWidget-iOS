@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1030"
+   version = "1.3">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+               BuildableName = "TfL Bus.app"
+               BlueprintName = "TfLBus"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+            BuildableName = "TfL Bus.app"
+            BlueprintName = "TfLBus"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B324A91F2313228E00639923"
+            BuildableName = "libTfLBusOperations.a"
+            BlueprintName = "TfLBusOperations"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A368523100A76008ACD7D"
+            BuildableName = "libTfLBusRepository.a"
+            BlueprintName = "TfLBusRepository"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A3649230F642A008ACD7D"
+            BuildableName = "TfLBusWidget.appex"
+            BlueprintName = "TfLBusWidget"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B31A3636230F62BF008ACD7D"
+               BuildableName = "TfLBusTests.xctest"
+               BlueprintName = "TfLBusTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3FC9FD72322FF6900E21E86"
+               BuildableName = "TfLBusOperationsTests.xctest"
+               BlueprintName = "TfLBusOperationsTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B31A369023100AA0008ACD7D"
+               BuildableName = "TfLBusRepositoryTests.xctest"
+               BlueprintName = "TfLBusRepositoryTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+            BuildableName = "TfL Bus.app"
+            BlueprintName = "TfLBus"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+            BuildableName = "TfL Bus.app"
+            BlueprintName = "TfLBus"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+            BuildableName = "TfL Bus.app"
+            BlueprintName = "TfLBus"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
