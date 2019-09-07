@@ -23,8 +23,7 @@ extension TfLWrapperDefaultTests {
         }
         let resultBusStopExpectation = XCTestExpectation(description: "result bus-stop must be a failure")
         tflWrapper.busStop(stopId: "stopId") { resultBusStop in
-            if case let .failure(tflWrapperError) = resultBusStop,
-                case let .generic(genericError) = tflWrapperError,
+            if case let .failure(.generic(genericError)) = resultBusStop,
                 let error = genericError as? HttpClientError,
                 error == httpClientError {
                 resultBusStopExpectation.fulfill()
@@ -41,8 +40,7 @@ extension TfLWrapperDefaultTests {
         }
         let resultBusStopExpectation = XCTestExpectation(description: "result bus-stop must be a failure")
         tflWrapper.busStop(stopId: "stopId") { resultBusStop in
-            if case let .failure(tflWrapperError) = resultBusStop,
-                case let .generic(genericError) = tflWrapperError,
+            if case let .failure(.generic(genericError)) = resultBusStop,
                 let error = genericError as? TfLWrapperDefault.TfLWrapperDefaultError,
                 case .jsonParsingError = error {
                 resultBusStopExpectation.fulfill()
@@ -53,11 +51,7 @@ extension TfLWrapperDefaultTests {
     
     func test_busStopSucceeds_whenHttpClientSucceeds() {
         let (httpClientMock, tflWrapper) = makeTfLWrapper()
-        let expectedBusStop = BusStop(
-            id: "490000119F",
-            streetCode: "F",
-            stopName: "HYDE PARK CORNER"
-        )
+        let expectedBusStop = BusStop(id: "490000119F",streetCode: "F", stopName: "HYDE PARK CORNER")
         let busStopData = try! JSONEncoder().encode(expectedBusStop)
         httpClientMock.fetchFromPathWithCompletion = { _, completion in
             completion(.success(busStopData))
@@ -86,8 +80,7 @@ extension TfLWrapperDefaultTests {
         }
         let resultArrivalsExpectation = XCTestExpectation(description: "result arrivals must be a failure")
         tflWrapper.arrivalsInSeconds(stopId: "stopId", lineId: "lineId") { resultArrivalsInSeconds in
-            if case let .failure(tflWrapperError) = resultArrivalsInSeconds,
-                case let .generic(genericError) = tflWrapperError,
+            if case let .failure(.generic(genericError)) = resultArrivalsInSeconds,
                 let error = genericError as? HttpClientError,
                 error == httpClientError {
                 resultArrivalsExpectation.fulfill()
@@ -104,8 +97,7 @@ extension TfLWrapperDefaultTests {
         }
         let resultArrivalsExpectation = XCTestExpectation(description: "result bus-stop must be a failure")
         tflWrapper.arrivalsInSeconds(stopId: "stopId", lineId: "lineId") { resultArrivalsInSeconds in
-            if case let .failure(tflWrapperError) = resultArrivalsInSeconds,
-                case let .generic(genericError) = tflWrapperError,
+            if case let .failure(.generic(genericError)) = resultArrivalsInSeconds,
                 let error = genericError as? TfLWrapperDefault.TfLWrapperDefaultError,
                 case .jsonParsingError = error {
                 resultArrivalsExpectation.fulfill()
