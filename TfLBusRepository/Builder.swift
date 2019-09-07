@@ -3,7 +3,8 @@ import Foundation
 public enum Builder {
 
     public static func makeTfLWrapper() -> TfLWrapper {
-        return TfLWrapperDefault(httpClient: HttpClientURLSession())
+        let httpClient = HttpClientURLSession(urlSession: URLSession.shared)
+        return TfLWrapperDefault(httpClient: httpClient)
     }
 
     public static func makeUserConfiguration() -> UserConfiguration {

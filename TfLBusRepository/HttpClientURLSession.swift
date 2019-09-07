@@ -1,7 +1,15 @@
 import Foundation
 
-final class HttpClientURLSession: HttpClient {
+final class HttpClientURLSession {
 
+    private let urlSession: URLSessionProtocol
+
+    init(urlSession: URLSessionProtocol) {
+        self.urlSession = urlSession
+    }
+}
+
+extension HttpClientURLSession: HttpClient {
     func fetch(
         path: String,
         completion: @escaping (Result<Data, HttpClientError>) -> Void
@@ -12,7 +20,7 @@ final class HttpClientURLSession: HttpClient {
         }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = urlSession.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 completion(.failure(.unknown(error!)))
                 return

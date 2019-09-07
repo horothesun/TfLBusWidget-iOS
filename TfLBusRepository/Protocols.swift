@@ -49,3 +49,14 @@ protocol HttpClient {
         completion: @escaping (Result<Data, HttpClientError>) -> Void
     )
 }
+
+protocol URLSessionProtocol {
+    func dataTask(
+        with request: URLRequest,
+        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
+    ) -> URLSessionDataTaskProtocol
+}
+
+protocol URLSessionDataTaskProtocol {
+    func resume()
+}

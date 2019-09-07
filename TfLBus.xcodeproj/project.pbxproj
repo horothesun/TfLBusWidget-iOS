@@ -14,6 +14,12 @@
 		B30AD59C23241CC500B6847E /* ViewModelDispatchQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */; };
 		B30AD59E232422FA00B6847E /* MockHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD59D232422FA00B6847E /* MockHttpClient.swift */; };
 		B30AD5A02324287C00B6847E /* HttpClientError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */; };
+		B30AD5A323243B5500B6847E /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A223243B5500B6847E /* MockUserDefaults.swift */; };
+		B30AD5A523245B7600B6847E /* UserConfigurationDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */; };
+		B30AD5A7232469DE00B6847E /* HttpClientURLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */; };
+		B30AD5A923246B8500B6847E /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */; };
+		B30AD5AB23246F1C00B6847E /* URLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */; };
+		B30AD5AD23246FE400B6847E /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
@@ -153,6 +159,12 @@
 		B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDispatchQueueTests.swift; sourceTree = "<group>"; };
 		B30AD59D232422FA00B6847E /* MockHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHttpClient.swift; sourceTree = "<group>"; };
 		B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpClientError+Equatable.swift"; sourceTree = "<group>"; };
+		B30AD5A223243B5500B6847E /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationDefaultTests.swift; sourceTree = "<group>"; };
+		B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientURLSessionTests.swift; sourceTree = "<group>"; };
+		B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
+		B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfL Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TfL Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -279,6 +291,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30AD5A123243B3B00B6847E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B30AD5A223243B5500B6847E /* MockUserDefaults.swift */,
+				B30AD59D232422FA00B6847E /* MockHttpClient.swift */,
+				B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */,
+				B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		B31A361A230F62BD008ACD7D = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +379,7 @@
 				B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */,
 				B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */,
 				B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */,
+				B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */,
 			);
 			path = TfLBusRepository;
 			sourceTree = "<group>";
@@ -364,8 +388,10 @@
 			isa = PBXGroup;
 			children = (
 				B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */,
-				B30AD59D232422FA00B6847E /* MockHttpClient.swift */,
+				B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */,
+				B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */,
 				B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */,
+				B30AD5A123243B3B00B6847E /* Mocks */,
 				B31A369523100AA0008ACD7D /* Info.plist */,
 			);
 			path = TfLBusRepositoryTests;
@@ -777,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31A36B3231044D2008ACD7D /* HttpClientURLSession.swift in Sources */,
+				B30AD5AB23246F1C00B6847E /* URLSession+URLSessionProtocol.swift in Sources */,
 				B31A368923100A76008ACD7D /* Protocols.swift in Sources */,
 				B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */,
 				B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */,
@@ -789,7 +816,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30AD59E232422FA00B6847E /* MockHttpClient.swift in Sources */,
+				B30AD5A923246B8500B6847E /* MockURLSessionProtocol.swift in Sources */,
+				B30AD5A7232469DE00B6847E /* HttpClientURLSessionTests.swift in Sources */,
 				B30AD5982324165C00B6847E /* TfLWrapperDefaultTests.swift in Sources */,
+				B30AD5A523245B7600B6847E /* UserConfigurationDefaultTests.swift in Sources */,
+				B30AD5AD23246FE400B6847E /* MockURLSessionDataTask.swift in Sources */,
+				B30AD5A323243B5500B6847E /* MockUserDefaults.swift in Sources */,
 				B30AD5A02324287C00B6847E /* HttpClientError+Equatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
