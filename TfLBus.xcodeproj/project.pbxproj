@@ -10,6 +10,8 @@
 		B30AD5942323F45000B6847E /* MockTfLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5932323F45000B6847E /* MockTfLWrapper.swift */; };
 		B30AD5962323F63600B6847E /* MockArrivalsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5952323F63600B6847E /* MockArrivalsFormatter.swift */; };
 		B30AD5982324165C00B6847E /* TfLWrapperDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */; };
+		B30AD59A2324191F00B6847E /* ArrivalsFormatterDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5992324191F00B6847E /* ArrivalsFormatterDefaultTests.swift */; };
+		B30AD59C23241CC500B6847E /* ViewModelDispatchQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
@@ -145,6 +147,8 @@
 		B30AD5932323F45000B6847E /* MockTfLWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTfLWrapper.swift; sourceTree = "<group>"; };
 		B30AD5952323F63600B6847E /* MockArrivalsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArrivalsFormatter.swift; sourceTree = "<group>"; };
 		B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLWrapperDefaultTests.swift; sourceTree = "<group>"; };
+		B30AD5992324191F00B6847E /* ArrivalsFormatterDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalsFormatterDefaultTests.swift; sourceTree = "<group>"; };
+		B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDispatchQueueTests.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfL Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TfL Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -316,8 +320,8 @@
 		B31A363A230F62BF008ACD7D /* TfLBusTests */ = {
 			isa = PBXGroup;
 			children = (
-				B31A363D230F62BF008ACD7D /* Info.plist */,
 				B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */,
+				B31A363D230F62BF008ACD7D /* Info.plist */,
 			);
 			path = TfLBusTests;
 			sourceTree = "<group>";
@@ -422,7 +426,9 @@
 		B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */ = {
 			isa = PBXGroup;
 			children = (
+				B30AD5992324191F00B6847E /* ArrivalsFormatterDefaultTests.swift */,
 				B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */,
+				B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */,
 				B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */,
 				B3FCA0112323D6A100E21E86 /* Info.plist */,
 				B3FCA01E2323F3C400E21E86 /* Mocks */,
@@ -818,11 +824,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30AD59A2324191F00B6847E /* ArrivalsFormatterDefaultTests.swift in Sources */,
 				B30AD5942323F45000B6847E /* MockTfLWrapper.swift in Sources */,
 				B3FCA01B2323D9E700E21E86 /* ViewModelOperationQueueTests.swift in Sources */,
 				B3FCA0192323D7BA00E21E86 /* Result_FoldTests.swift in Sources */,
 				B3FCA01D2323F3BA00E21E86 /* MockUserConfiguration.swift in Sources */,
 				B30AD5962323F63600B6847E /* MockArrivalsFormatter.swift in Sources */,
+				B30AD59C23241CC500B6847E /* ViewModelDispatchQueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
