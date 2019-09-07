@@ -3,8 +3,6 @@ import XCTest
 
 final class TfLWrapperDefaultTests: XCTestCase {
 
-    private enum FakeError: Error { case fake }
-
     private weak var weakTfLWrapper: TfLWrapperDefault!
     private weak var weakHttpClient: MockHttpClient!
 
@@ -13,6 +11,8 @@ final class TfLWrapperDefaultTests: XCTestCase {
         assertHttpClientNotLeaking()
     }
 }
+
+// MARK:- busStop(stopId:completion:)
 
 extension TfLWrapperDefaultTests {
     func test_busStopFails_whenHttpClient500s() {
@@ -73,7 +73,11 @@ extension TfLWrapperDefaultTests {
         }
         wait(for: [resultBusStopExpectation], timeout: 0.1)
     }
+}
 
+// MARK:- arrivalsInSeconds(stopId:lineId:completion:)
+
+extension TfLWrapperDefaultTests {
     func test_arrivalsInSecondsFails_whenHttpClient500s() {
         let (httpClientMock, tflWrapper) = makeTfLWrapper()
         let httpClientError: HttpClientError = .httpStatus(500)
