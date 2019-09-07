@@ -20,7 +20,7 @@ final class ViewModelOperationQueueTests: XCTestCase {
 }
 
 extension ViewModelOperationQueueTests {
-    func test_getDisplayModel_withoutStopIdNorLineId_fails() {
+    func test_getDisplayModelFails_withoutStopIdNorLineId() {
         let (userConfigurationMock, _, _, viewModel) = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = nil
         userConfigurationMock.lineId = nil
@@ -37,7 +37,7 @@ extension ViewModelOperationQueueTests {
         wait(for: [startRunOnMainThread, failureRunOnMainThread], timeout: 0.1)
     }
 
-    func test_getDisplayModel_withoutStopId_fails() {
+    func test_getDisplayModelFails_withoutStopId() {
         let (userConfigurationMock, _, _, viewModel) = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = nil
         userConfigurationMock.lineId = "lineId"
@@ -54,7 +54,7 @@ extension ViewModelOperationQueueTests {
         wait(for: [startRunOnMainThread, failureRunOnMainThread], timeout: 0.1)
     }
 
-    func test_getDisplayModel_withoutLineId_fails() {
+    func test_getDisplayModelFails_withoutLineId() {
         let (userConfigurationMock, _, _, viewModel) = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = "stopId"
         userConfigurationMock.lineId = nil
@@ -71,7 +71,7 @@ extension ViewModelOperationQueueTests {
         wait(for: [startRunOnMainThread, failureRunOnMainThread], timeout: 0.1)
     }
 
-    func test_getDisplayModel_whenBusStopFetchingFails_fails() {
+    func test_getDisplayModelFails_whenBusStopFetchingFails() {
         let (userConfigurationMock, tflWrapperMock, arrivalsFormatterMock, viewModel)
             = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = "stopId"
@@ -96,7 +96,7 @@ extension ViewModelOperationQueueTests {
         wait(for: [startRunOnMainThread, failureRunOnMainThread], timeout: 0.1)
     }
 
-    func test_getDisplayModel_whenArrivalsFetchingFails_fails() {
+    func test_getDisplayModelFails_whenArrivalsFetchingFails() {
         let (userConfigurationMock, tflWrapperMock, arrivalsFormatterMock, viewModel)
             = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = "stopId"
@@ -121,7 +121,7 @@ extension ViewModelOperationQueueTests {
         wait(for: [startRunOnMainThread, failureRunOnMainThread], timeout: 0.1)
     }
 
-    func test_getDisplayModel_whenFetchingSucceeds_succeeds() {
+    func test_getDisplayModelSucceeds_whenFetchingSucceeds() {
         let (userConfigurationMock, tflWrapperMock, arrivalsFormatterMock, viewModel)
             = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = "stopId"

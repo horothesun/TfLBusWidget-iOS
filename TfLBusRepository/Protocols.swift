@@ -2,7 +2,7 @@ import Foundation
 
 public enum TfLWrapperError: Error { case generic(Error) }
 
-public struct BusStop: Decodable {
+public struct BusStop: Codable {
     let id: String
     public let streetCode: String
     public let stopName: String
@@ -12,6 +12,12 @@ public struct BusStop: Decodable {
         self.streetCode = streetCode
         self.stopName = stopName
     }
+}
+
+struct ArrivalsResponse: Codable {
+    let stopId: String
+    let lineId: String
+    let arrivalsInSeconds: [Int]
 }
 
 public protocol TfLWrapper {

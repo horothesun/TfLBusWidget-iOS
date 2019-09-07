@@ -44,12 +44,6 @@ extension TfLWrapperDefault: TfLWrapper {
         lineId: String,
         completion: @escaping (Result<[Int], TfLWrapperError>) -> Void
     ) {
-        struct Response: Decodable {
-            let stopId: String
-            let lineId: String
-            let arrivalsInSeconds: [Int]
-        }
-
 //        completion(.success([20, 250]))
 
 //        completion(.failure(.generic(TfLWrapperDefaultError.jsonParsingError)))
@@ -58,7 +52,7 @@ extension TfLWrapperDefault: TfLWrapper {
         httpClient.fetch(path: path) { resultData in
             let resultArrivals = resultData
                 .flatMap { data -> Result<[Int], HttpClientError> in
-                    guard let response = try? JSONDecoder().decode(Response.self, from: data) else {
+                    guard let response = try? JSONDecoder().decode(ArrivalsResponse.self, from: data) else {
                         return .failure(.unknown(TfLWrapperDefaultError.jsonParsingError))
                     }
                     return .success(response.arrivalsInSeconds)
