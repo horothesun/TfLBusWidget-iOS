@@ -6,6 +6,12 @@ public struct BusStop: Decodable {
     let id: String
     public let streetCode: String
     public let stopName: String
+
+    public init(id: String, streetCode: String, stopName: String) {
+        self.id = id
+        self.streetCode = streetCode
+        self.stopName = stopName
+    }
 }
 
 public protocol TfLWrapper {

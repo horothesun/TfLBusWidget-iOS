@@ -3,7 +3,7 @@ import TfLBusOperations
 
 final class Operation_AddDependenciesTests: XCTestCase {
 
-    weak var weakOperation: Operation!
+    private weak var weakOperation: Operation!
 
     override func tearDown() {
         assertOperationNotLeaking()

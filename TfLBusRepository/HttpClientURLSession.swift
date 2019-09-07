@@ -1,6 +1,6 @@
 import Foundation
 
-struct HttpClientURLSession: HttpClient {
+final class HttpClientURLSession: HttpClient {
 
     func fetch(
         path: String,

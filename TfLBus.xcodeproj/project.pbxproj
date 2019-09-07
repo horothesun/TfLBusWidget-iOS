@@ -7,40 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30AD5942323F45000B6847E /* MockTfLWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5932323F45000B6847E /* MockTfLWrapper.swift */; };
+		B30AD5962323F63600B6847E /* MockArrivalsFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5952323F63600B6847E /* MockArrivalsFormatter.swift */; };
+		B30AD5982324165C00B6847E /* TfLWrapperDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
 		B31A3631230F62BF008ACD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31A362F230F62BF008ACD7D /* LaunchScreen.storyboard */; };
 		B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A364C230F642B008ACD7D /* NotificationCenter.framework */; };
-		B31A3650230F642B008ACD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A364F230F642B008ACD7D /* ViewController.swift */; };
 		B31A3657230F642B008ACD7D /* TfLBusWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B31A364A230F642A008ACD7D /* TfLBusWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B31A368923100A76008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A368823100A76008ACD7D /* Protocols.swift */; };
 		B31A369623100AA0008ACD7D /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
-		B31A369C23100AC4008ACD7D /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
 		B31A369E23100CA5008ACD7D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A369D23100CA5008ACD7D /* Builder.swift */; };
 		B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */; };
 		B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */; };
-		B31A36A423100F15008ACD7D /* ViewModelDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36A323100F15008ACD7D /* ViewModelDispatchQueue.swift */; };
-		B31A36A623100FBE008ACD7D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36A523100FBE008ACD7D /* Builder.swift */; };
 		B31A36A923102147008ACD7D /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
 		B31A36AB23102451008ACD7D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AA23102451008ACD7D /* MainCoordinator.swift */; };
 		B31A36AD23102548008ACD7D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AC23102548008ACD7D /* MainViewModel.swift */; };
 		B31A36AF231025A3008ACD7D /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AE231025A3008ACD7D /* MainBuilder.swift */; };
 		B31A36B3231044D2008ACD7D /* HttpClientURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */; };
-		B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B6231145E9008ACD7D /* Protocols.swift */; };
-		B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */; };
 		B324A92B2313233900639923 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9272313233900639923 /* AsyncOperation.swift */; };
 		B324A92C2313233900639923 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9282313233900639923 /* OutputOperation.swift */; };
 		B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9292313233900639923 /* Operation+AddDependencies.swift */; };
 		B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A92A2313233900639923 /* Input2OutputOperation.swift */; };
 		B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
-		B324A9312313355600639923 /* DisplayModelBuilderDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */; };
-		B324A9332313692E00639923 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9322313692E00639923 /* Result+Fold.swift */; };
 		B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */; };
 		B3FC9FDD2322FF6900E21E86 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
 		B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */; };
 		B3FC9FE8232313CE00E21E86 /* Operation+AddDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */; };
 		B3FC9FEA232318B800E21E86 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */; };
+		B3FC9FFD2323D47200E21E86 /* ViewModelDispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */; };
+		B3FC9FFE2323D47200E21E86 /* ViewModelOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FF72323D47200E21E86 /* ViewModelOperationQueue.swift */; };
+		B3FCA0002323D47200E21E86 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FF92323D47200E21E86 /* Protocols.swift */; };
+		B3FCA0012323D47200E21E86 /* ArrivalsFormatterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFA2323D47200E21E86 /* ArrivalsFormatterDefault.swift */; };
+		B3FCA0022323D47200E21E86 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */; };
+		B3FCA0032323D47200E21E86 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFC2323D47200E21E86 /* Builder.swift */; };
+		B3FCA0042323D4AA00E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
+		B3FCA0062323D55500E21E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0052323D55500E21E86 /* ViewController.swift */; };
+		B3FCA0072323D59C00E21E86 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
+		B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
+		B3FCA0122323D6A100E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
+		B3FCA0192323D7BA00E21E86 /* Result_FoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */; };
+		B3FCA01B2323D9E700E21E86 /* ViewModelOperationQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */; };
+		B3FCA01D2323F3BA00E21E86 /* MockUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA01C2323F3BA00E21E86 /* MockUserConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B324A91F2313228E00639923;
 			remoteInfo = TfLBusOperations;
+		};
+		B3FCA0132323D6A100E21E86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31A361B230F62BD008ACD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3FC9FEE2323D3D700E21E86;
+			remoteInfo = TfLBusWidgetFeature;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -114,9 +130,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FC9FED2323D3D700E21E86 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B30AD5932323F45000B6847E /* MockTfLWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTfLWrapper.swift; sourceTree = "<group>"; };
+		B30AD5952323F63600B6847E /* MockArrivalsFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockArrivalsFormatter.swift; sourceTree = "<group>"; };
+		B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLWrapperDefaultTests.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfL Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TfL Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +155,6 @@
 		B31A363D230F62BF008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A364A230F642A008ACD7D /* TfLBusWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TfLBusWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A364C230F642B008ACD7D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
-		B31A364F230F642B008ACD7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B31A3654230F642B008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A368623100A76008ACD7D /* libTfLBusRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusRepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A368823100A76008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -136,29 +163,36 @@
 		B31A369D23100CA5008ACD7D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLWrapperDefault.swift; sourceTree = "<group>"; };
 		B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationDefault.swift; sourceTree = "<group>"; };
-		B31A36A323100F15008ACD7D /* ViewModelDispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDispatchQueue.swift; sourceTree = "<group>"; };
-		B31A36A523100FBE008ACD7D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		B31A36A72310204E008ACD7D /* TfLBus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TfLBus.entitlements; sourceTree = "<group>"; };
 		B31A36A823102094008ACD7D /* TfLBusWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TfLBusWidget.entitlements; sourceTree = "<group>"; };
 		B31A36AA23102451008ACD7D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B31A36AC23102548008ACD7D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B31A36AE231025A3008ACD7D /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientURLSession.swift; sourceTree = "<group>"; };
-		B31A36B6231145E9008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
 		B324A9202313228E00639923 /* libTfLBusOperations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusOperations.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B324A9272313233900639923 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		B324A9282313233900639923 /* OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
 		B324A9292313233900639923 /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
 		B324A92A2313233900639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
-		B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModelBuilderDefault.swift; sourceTree = "<group>"; };
-		B324A9322313692E00639923 /* Result+Fold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Fold.swift"; sourceTree = "<group>"; };
 		B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperationTests.swift; sourceTree = "<group>"; };
 		B3FC9FDC2322FF6900E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperationTests.swift; sourceTree = "<group>"; };
 		B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependenciesTests.swift"; sourceTree = "<group>"; };
 		B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusWidgetFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelDispatchQueue.swift; sourceTree = "<group>"; };
+		B3FC9FF72323D47200E21E86 /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
+		B3FC9FF92323D47200E21E86 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B3FC9FFA2323D47200E21E86 /* ArrivalsFormatterDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivalsFormatterDefault.swift; sourceTree = "<group>"; };
+		B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Fold.swift"; sourceTree = "<group>"; };
+		B3FC9FFC2323D47200E21E86 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B3FCA0052323D55500E21E86 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusWidgetFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FCA0112323D6A100E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_FoldTests.swift; sourceTree = "<group>"; };
+		B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueueTests.swift; sourceTree = "<group>"; };
+		B3FCA01C2323F3BA00E21E86 /* MockUserConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockUserConfiguration.swift; path = ../MockUserConfiguration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +215,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A369C23100AC4008ACD7D /* libTfLBusRepository.a in Frameworks */,
+				B3FCA0042323D4AA00E21E86 /* libTfLBusWidgetFeature.a in Frameworks */,
 				B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +251,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FC9FEC2323D3D700E21E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FCA0072323D59C00E21E86 /* libTfLBusOperations.a in Frameworks */,
+				B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FCA00A2323D6A100E21E86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FCA0122323D6A100E21E86 /* libTfLBusWidgetFeature.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -226,6 +277,8 @@
 				B31A3625230F62BD008ACD7D /* TfLBus */,
 				B31A363A230F62BF008ACD7D /* TfLBusTests */,
 				B31A364E230F642B008ACD7D /* TfLBusWidget */,
+				B3FC9FF02323D3D800E21E86 /* TfLBusWidgetFeature */,
+				B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
 				B31A368723100A76008ACD7D /* TfLBusRepository */,
 				B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */,
 				B324A9212313228E00639923 /* TfLBusOperations */,
@@ -245,6 +298,8 @@
 				B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */,
 				B324A9202313228E00639923 /* libTfLBusOperations.a */,
 				B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */,
+				B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */,
+				B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -278,13 +333,7 @@
 		B31A364E230F642B008ACD7D /* TfLBusWidget */ = {
 			isa = PBXGroup;
 			children = (
-				B31A36B6231145E9008ACD7D /* Protocols.swift */,
-				B31A36A523100FBE008ACD7D /* Builder.swift */,
-				B324A9302313355600639923 /* DisplayModelBuilderDefault.swift */,
-				B31A36A323100F15008ACD7D /* ViewModelDispatchQueue.swift */,
-				B31A36B82311E8FF008ACD7D /* ViewModelOperationQueue.swift */,
-				B31A364F230F642B008ACD7D /* ViewController.swift */,
-				B324A9322313692E00639923 /* Result+Fold.swift */,
+				B3FCA0052323D55500E21E86 /* ViewController.swift */,
 				B31A36A823102094008ACD7D /* TfLBusWidget.entitlements */,
 				B31A3654230F642B008ACD7D /* Info.plist */,
 			);
@@ -306,6 +355,7 @@
 		B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */ = {
 			isa = PBXGroup;
 			children = (
+				B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */,
 				B31A369523100AA0008ACD7D /* Info.plist */,
 			);
 			path = TfLBusRepositoryTests;
@@ -354,6 +404,40 @@
 				B3FC9FDC2322FF6900E21E86 /* Info.plist */,
 			);
 			path = TfLBusOperationsTests;
+			sourceTree = "<group>";
+		};
+		B3FC9FF02323D3D800E21E86 /* TfLBusWidgetFeature */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC9FF92323D47200E21E86 /* Protocols.swift */,
+				B3FC9FFC2323D47200E21E86 /* Builder.swift */,
+				B3FC9FFA2323D47200E21E86 /* ArrivalsFormatterDefault.swift */,
+				B3FC9FF72323D47200E21E86 /* ViewModelOperationQueue.swift */,
+				B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */,
+				B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */,
+			);
+			path = TfLBusWidgetFeature;
+			sourceTree = "<group>";
+		};
+		B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */,
+				B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */,
+				B3FCA0112323D6A100E21E86 /* Info.plist */,
+				B3FCA01E2323F3C400E21E86 /* Mocks */,
+			);
+			path = TfLBusWidgetFeatureTests;
+			sourceTree = "<group>";
+		};
+		B3FCA01E2323F3C400E21E86 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B3FCA01C2323F3BA00E21E86 /* MockUserConfiguration.swift */,
+				B30AD5932323F45000B6847E /* MockTfLWrapper.swift */,
+				B30AD5952323F63600B6847E /* MockArrivalsFormatter.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +568,41 @@
 			productReference = B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeature" */;
+			buildPhases = (
+				B3FC9FEB2323D3D700E21E86 /* Sources */,
+				B3FC9FEC2323D3D700E21E86 /* Frameworks */,
+				B3FC9FED2323D3D700E21E86 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TfLBusWidgetFeature;
+			productName = TfLBusWidgetFeature;
+			productReference = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3FCA00C2323D6A100E21E86 /* TfLBusWidgetFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeatureTests" */;
+			buildPhases = (
+				B3FCA0092323D6A100E21E86 /* Sources */,
+				B3FCA00A2323D6A100E21E86 /* Frameworks */,
+				B3FCA00B2323D6A100E21E86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3FCA0142323D6A100E21E86 /* PBXTargetDependency */,
+			);
+			name = TfLBusWidgetFeatureTests;
+			productName = TfLBusWidgetFeatureTests;
+			productReference = B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -509,6 +628,7 @@
 					};
 					B31A3649230F642A008ACD7D = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -520,12 +640,20 @@
 					};
 					B31A369023100AA0008ACD7D = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					B324A91F2313228E00639923 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
 					};
 					B3FC9FD72322FF6900E21E86 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					B3FC9FEE2323D3D700E21E86 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					B3FCA00C2323D6A100E21E86 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -546,6 +674,8 @@
 				B31A3622230F62BD008ACD7D /* TfLBus */,
 				B31A3636230F62BF008ACD7D /* TfLBusTests */,
 				B31A3649230F642A008ACD7D /* TfLBusWidget */,
+				B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */,
+				B3FCA00C2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
 				B31A368523100A76008ACD7D /* TfLBusRepository */,
 				B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */,
 				B324A91F2313228E00639923 /* TfLBusOperations */,
@@ -592,6 +722,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3FCA00B2323D6A100E21E86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -619,13 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A36B7231145E9008ACD7D /* Protocols.swift in Sources */,
-				B31A36A423100F15008ACD7D /* ViewModelDispatchQueue.swift in Sources */,
-				B324A9332313692E00639923 /* Result+Fold.swift in Sources */,
-				B31A36B92311E8FF008ACD7D /* ViewModelOperationQueue.swift in Sources */,
-				B31A36A623100FBE008ACD7D /* Builder.swift in Sources */,
-				B324A9312313355600639923 /* DisplayModelBuilderDefault.swift in Sources */,
-				B31A3650230F642B008ACD7D /* ViewController.swift in Sources */,
+				B3FCA0062323D55500E21E86 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +776,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B30AD5982324165C00B6847E /* TfLWrapperDefaultTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +798,31 @@
 				B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */,
 				B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */,
 				B3FC9FE8232313CE00E21E86 /* Operation+AddDependenciesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FC9FEB2323D3D700E21E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FCA0012323D47200E21E86 /* ArrivalsFormatterDefault.swift in Sources */,
+				B3FCA0032323D47200E21E86 /* Builder.swift in Sources */,
+				B3FC9FFE2323D47200E21E86 /* ViewModelOperationQueue.swift in Sources */,
+				B3FC9FFD2323D47200E21E86 /* ViewModelDispatchQueue.swift in Sources */,
+				B3FCA0002323D47200E21E86 /* Protocols.swift in Sources */,
+				B3FCA0022323D47200E21E86 /* Result+Fold.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3FCA0092323D6A100E21E86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30AD5942323F45000B6847E /* MockTfLWrapper.swift in Sources */,
+				B3FCA01B2323D9E700E21E86 /* ViewModelOperationQueueTests.swift in Sources */,
+				B3FCA0192323D7BA00E21E86 /* Result_FoldTests.swift in Sources */,
+				B3FCA01D2323F3BA00E21E86 /* MockUserConfiguration.swift in Sources */,
+				B30AD5962323F63600B6847E /* MockArrivalsFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +848,11 @@
 			isa = PBXTargetDependency;
 			target = B324A91F2313228E00639923 /* TfLBusOperations */;
 			targetProxy = B3FC9FDE2322FF6900E21E86 /* PBXContainerItemProxy */;
+		};
+		B3FCA0142323D6A100E21E86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */;
+			targetProxy = B3FCA0132323D6A100E21E86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -912,6 +1074,7 @@
 		B31A3659230F642B008ACD7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TfLBusWidget/TfLBusWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
@@ -924,6 +1087,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus.TfLBusWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -932,6 +1096,7 @@
 		B31A365A230F642B008ACD7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = TfLBusWidget/TfLBusWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
@@ -978,6 +1143,7 @@
 		B31A369A23100AA0008ACD7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
 				INFOPLIST_FILE = TfLBusRepositoryTests/Info.plist;
@@ -988,6 +1154,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusRepositoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -996,6 +1163,7 @@
 		B31A369B23100AA0008ACD7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
 				INFOPLIST_FILE = TfLBusRepositoryTests/Info.plist;
@@ -1086,6 +1254,81 @@
 			};
 			name = Release;
 		};
+		B3FC9FF42323D3D800E21E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3FC9FF52323D3D800E21E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3FCA0162323D6A100E21E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = TfLBusWidgetFeatureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusWidgetFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3FCA0172323D6A100E21E86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = TfLBusWidgetFeatureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusWidgetFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1157,6 +1400,24 @@
 			buildConfigurations = (
 				B3FC9FE02322FF6900E21E86 /* Debug */,
 				B3FC9FE12322FF6900E21E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeature" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FC9FF42323D3D800E21E86 /* Debug */,
+				B3FC9FF52323D3D800E21E86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FCA0162323D6A100E21E86 /* Debug */,
+				B3FCA0172323D6A100E21E86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,6 @@
 import Foundation
 
-struct UserConfigurationDefault {
+final class UserConfigurationDefault {
 
     private let stopIdKey = "stopIdKey"
     private let lineIdKey = "lineIdKey"

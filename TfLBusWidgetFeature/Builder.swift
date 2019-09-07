@@ -2,13 +2,13 @@ import Foundation
 //import Dispatch
 import TfLBusRepository
 
-enum Builder {
+public enum Builder {
 
-    static func makeViewModel() -> ViewModel {
+    public static func makeViewModel() -> ViewModel {
         return ViewModelOperationQueue(
             userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
             tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
-            displayModelBuilder: DisplayModelBuilderDefault(),
+            arrivalsFormatter: ArrivalsFormatterDefault(),
             processingQueue: makeConcurrentQueue()
         )
     }
@@ -20,11 +20,11 @@ enum Builder {
         return operationQueue
     }
 
-//    static func makeViewModel() -> ViewModel {
+//    public static func makeViewModel() -> ViewModel {
 //        return ViewModelDispatchQueue(
 //            userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
 //            tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
-//            displayModelBuilder: DisplayModelBuilderDefault(),
+//            arrivalsFormatter: ArrivalsFormatterDefault(),
 //            processingQueue: DispatchQueue.global(qos: .userInitiated)
 //        )
 //    }

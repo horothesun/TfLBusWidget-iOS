@@ -3,7 +3,7 @@ import TfLBusOperations
 
 final class Input2OutputOperationTests: XCTestCase {
 
-    weak var weakOperation: Input2OutputOperation<Int, Int, Int>!
+    private weak var weakOperation: Input2OutputOperation<Int, Int, Int>!
 
     override func tearDown() {
         assertOperationNotLeaking()

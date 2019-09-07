@@ -1,6 +1,6 @@
 import Foundation
 
-struct TfLWrapperDefault {
+final class TfLWrapperDefault {
 
     private typealias `Self` = TfLWrapperDefault
 

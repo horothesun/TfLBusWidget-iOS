@@ -1,5 +1,6 @@
 import UIKit
 import NotificationCenter
+import TfLBusWidgetFeature
 
 @objc (ViewController)
 
@@ -118,8 +119,8 @@ extension ViewController: NCWidgetProviding {
                 self?.arrivalsLabel.isHidden = false
                 completionHandler(.newData)
             },
-            failure: { [weak self] errorDisplayModel in
-                self?.errorLabel.text = errorDisplayModel.message
+            failure: { [weak self] displayModel in
+                self?.errorLabel.text = displayModel.message
                 self?.busStopLabel.text = nil
                 self?.lineLabel.text = nil
                 self?.arrivalsLabel.text = nil

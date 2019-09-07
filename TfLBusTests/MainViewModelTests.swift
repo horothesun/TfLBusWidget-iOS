@@ -1,13 +1,23 @@
 import XCTest
-import TfL_Bus
+@testable import TfL_Bus
 
 final class MainViewModelTests: XCTestCase {
 
-    override func tearDown() {
-        // ...
-    }
+    private weak var weakViewModel: MainViewModelDefault!
 
-    func testExample() {
-        // TODO: ...
+    override func tearDown() {
+        assertViewModelNotLeaking()
+    }
+}
+
+extension MainViewModelTests {
+    func test_() {
+        // TODO: implement!!! 🔥🔥🔥
+    }
+}
+
+extension MainViewModelTests {
+    private func assertViewModelNotLeaking() {
+        XCTAssertNil(weakViewModel)
     }
 }
