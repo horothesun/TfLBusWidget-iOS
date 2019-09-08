@@ -16,10 +16,6 @@
 		B30AD5A02324287C00B6847E /* HttpClientError+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */; };
 		B30AD5A323243B5500B6847E /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A223243B5500B6847E /* MockUserDefaults.swift */; };
 		B30AD5A523245B7600B6847E /* UserConfigurationDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */; };
-		B30AD5A7232469DE00B6847E /* HttpClientURLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */; };
-		B30AD5A923246B8500B6847E /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */; };
-		B30AD5AB23246F1C00B6847E /* URLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */; };
-		B30AD5AD23246FE400B6847E /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */; };
 		B31A3627230F62BD008ACD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3626230F62BD008ACD7D /* AppDelegate.swift */; };
 		B31A3629230F62BD008ACD7D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A3628230F62BD008ACD7D /* MainViewController.swift */; };
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
@@ -35,14 +31,22 @@
 		B31A36AB23102451008ACD7D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AA23102451008ACD7D /* MainCoordinator.swift */; };
 		B31A36AD23102548008ACD7D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AC23102548008ACD7D /* MainViewModel.swift */; };
 		B31A36AF231025A3008ACD7D /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AE231025A3008ACD7D /* MainBuilder.swift */; };
-		B31A36B3231044D2008ACD7D /* HttpClientURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */; };
 		B324A92B2313233900639923 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9272313233900639923 /* AsyncOperation.swift */; };
 		B324A92C2313233900639923 /* OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9282313233900639923 /* OutputOperation.swift */; };
 		B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A9292313233900639923 /* Operation+AddDependencies.swift */; };
 		B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324A92A2313233900639923 /* Input2OutputOperation.swift */; };
-		B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
+		B3F94F652324869A00011ABF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F642324869A00011ABF /* Protocols.swift */; };
+		B3F94F682324870300011ABF /* HttpClientURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F662324870200011ABF /* HttpClientURLSession.swift */; };
+		B3F94F692324870300011ABF /* URLSession+URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F672324870200011ABF /* URLSession+URLSessionProtocol.swift */; };
+		B3F94F732324874000011ABF /* libHttpClientLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F94F5D2324866400011ABF /* libHttpClientLib.a */; };
+		B3F94F7B2324883000011ABF /* HttpClientURLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */; };
+		B3F94F7F2324886800011ABF /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7D2324886800011ABF /* MockURLSessionDataTask.swift */; };
+		B3F94F802324886800011ABF /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7E2324886800011ABF /* MockURLSessionProtocol.swift */; };
+		B3F94F82232488C600011ABF /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F81232488C600011ABF /* Builder.swift */; };
+		B3F94F8323248A1300011ABF /* libHttpClientLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F94F5D2324866400011ABF /* libHttpClientLib.a */; };
+		B3F94F8423248BD900011ABF /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
 		B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */; };
-		B3FC9FDD2322FF6900E21E86 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
+		B3FC9FDD2322FF6900E21E86 /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
 		B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */; };
 		B3FC9FE8232313CE00E21E86 /* Operation+AddDependenciesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */; };
 		B3FC9FEA232318B800E21E86 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */; };
@@ -54,7 +58,7 @@
 		B3FCA0032323D47200E21E86 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFC2323D47200E21E86 /* Builder.swift */; };
 		B3FCA0042323D4AA00E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
 		B3FCA0062323D55500E21E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0052323D55500E21E86 /* ViewController.swift */; };
-		B3FCA0072323D59C00E21E86 /* libTfLBusOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libTfLBusOperations.a */; };
+		B3FCA0072323D59C00E21E86 /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
 		B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
 		B3FCA0122323D6A100E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
 		B3FCA0192323D7BA00E21E86 /* Result_FoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */; };
@@ -83,6 +87,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = B31A368523100A76008ACD7D;
 			remoteInfo = TfLBusRepository;
+		};
+		B3F94F742324874000011ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31A361B230F62BD008ACD7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F94F5C2324866400011ABF;
+			remoteInfo = HttpClient;
 		};
 		B3FC9FDE2322FF6900E21E86 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -140,6 +151,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3F94F5B2324866400011ABF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3FC9FED2323D3D700E21E86 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,10 +181,6 @@
 		B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HttpClientError+Equatable.swift"; sourceTree = "<group>"; };
 		B30AD5A223243B5500B6847E /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 		B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserConfigurationDefaultTests.swift; sourceTree = "<group>"; };
-		B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientURLSessionTests.swift; sourceTree = "<group>"; };
-		B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
-		B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
-		B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		B31A3623230F62BD008ACD7D /* TfL Bus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TfL Bus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A3626230F62BD008ACD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B31A3628230F62BD008ACD7D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -188,13 +204,22 @@
 		B31A36AA23102451008ACD7D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		B31A36AC23102548008ACD7D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B31A36AE231025A3008ACD7D /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientURLSession.swift; sourceTree = "<group>"; };
-		B324A9202313228E00639923 /* libTfLBusOperations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusOperations.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B324A9202313228E00639923 /* libOperationsLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOperationsLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B324A9272313233900639923 /* AsyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		B324A9282313233900639923 /* OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OutputOperation.swift; sourceTree = "<group>"; };
 		B324A9292313233900639923 /* Operation+AddDependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependencies.swift"; sourceTree = "<group>"; };
 		B324A92A2313233900639923 /* Input2OutputOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Input2OutputOperation.swift; sourceTree = "<group>"; };
-		B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F94F5D2324866400011ABF /* libHttpClientLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHttpClientLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F94F642324869A00011ABF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B3F94F662324870200011ABF /* HttpClientURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientURLSession.swift; sourceTree = "<group>"; };
+		B3F94F672324870200011ABF /* URLSession+URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSession+URLSessionProtocol.swift"; sourceTree = "<group>"; };
+		B3F94F6E2324874000011ABF /* HttpClientLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HttpClientLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F94F722324874000011ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientURLSessionTests.swift; sourceTree = "<group>"; };
+		B3F94F7D2324886800011ABF /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		B3F94F7E2324886800011ABF /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
+		B3F94F81232488C600011ABF /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperationTests.swift; sourceTree = "<group>"; };
 		B3FC9FDC2322FF6900E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperationTests.swift; sourceTree = "<group>"; };
@@ -244,7 +269,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B324A92F2313236A00639923 /* libTfLBusOperations.a in Frameworks */,
+				B3F94F8423248BD900011ABF /* libOperationsLib.a in Frameworks */,
+				B3F94F8323248A1300011ABF /* libHttpClientLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,11 +289,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3F94F5A2324866400011ABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F94F6B2324874000011ABF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F94F732324874000011ABF /* libHttpClientLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B3FC9FD52322FF6900E21E86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FC9FDD2322FF6900E21E86 /* libTfLBusOperations.a in Frameworks */,
+				B3FC9FDD2322FF6900E21E86 /* libOperationsLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FCA0072323D59C00E21E86 /* libTfLBusOperations.a in Frameworks */,
+				B3FCA0072323D59C00E21E86 /* libOperationsLib.a in Frameworks */,
 				B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,8 +337,6 @@
 			children = (
 				B30AD5A223243B5500B6847E /* MockUserDefaults.swift */,
 				B30AD59D232422FA00B6847E /* MockHttpClient.swift */,
-				B30AD5A823246B8500B6847E /* MockURLSessionProtocol.swift */,
-				B30AD5AC23246FE400B6847E /* MockURLSessionDataTask.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -312,8 +351,10 @@
 				B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
 				B31A368723100A76008ACD7D /* TfLBusRepository */,
 				B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */,
-				B324A9212313228E00639923 /* TfLBusOperations */,
-				B3FC9FD92322FF6900E21E86 /* TfLBusOperationsTests */,
+				B324A9212313228E00639923 /* OperationsLib */,
+				B3FC9FD92322FF6900E21E86 /* OperationsLibTests */,
+				B3F94F5E2324866500011ABF /* HttpClientLib */,
+				B3F94F6F2324874000011ABF /* HttpClientLibTests */,
 				B31A364B230F642B008ACD7D /* Frameworks */,
 				B31A3624230F62BD008ACD7D /* Products */,
 			);
@@ -327,10 +368,12 @@
 				B31A364A230F642A008ACD7D /* TfLBusWidget.appex */,
 				B31A368623100A76008ACD7D /* libTfLBusRepository.a */,
 				B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */,
-				B324A9202313228E00639923 /* libTfLBusOperations.a */,
-				B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */,
+				B324A9202313228E00639923 /* libOperationsLib.a */,
+				B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */,
 				B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */,
 				B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */,
+				B3F94F5D2324866400011ABF /* libHttpClientLib.a */,
+				B3F94F6E2324874000011ABF /* HttpClientLibTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -378,8 +421,6 @@
 				B31A369D23100CA5008ACD7D /* Builder.swift */,
 				B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */,
 				B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */,
-				B31A36B2231044D2008ACD7D /* HttpClientURLSession.swift */,
-				B30AD5AA23246F1C00B6847E /* URLSession+URLSessionProtocol.swift */,
 			);
 			path = TfLBusRepository;
 			sourceTree = "<group>";
@@ -389,7 +430,6 @@
 			children = (
 				B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */,
 				B30AD5A423245B7600B6847E /* UserConfigurationDefaultTests.swift */,
-				B30AD5A6232469DE00B6847E /* HttpClientURLSessionTests.swift */,
 				B30AD59F2324287C00B6847E /* HttpClientError+Equatable.swift */,
 				B30AD5A123243B3B00B6847E /* Mocks */,
 				B31A369523100AA0008ACD7D /* Info.plist */,
@@ -420,7 +460,7 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		B324A9212313228E00639923 /* TfLBusOperations */ = {
+		B324A9212313228E00639923 /* OperationsLib */ = {
 			isa = PBXGroup;
 			children = (
 				B324A92A2313233900639923 /* Input2OutputOperation.swift */,
@@ -428,10 +468,40 @@
 				B324A9272313233900639923 /* AsyncOperation.swift */,
 				B324A9292313233900639923 /* Operation+AddDependencies.swift */,
 			);
-			path = TfLBusOperations;
+			path = OperationsLib;
 			sourceTree = "<group>";
 		};
-		B3FC9FD92322FF6900E21E86 /* TfLBusOperationsTests */ = {
+		B3F94F5E2324866500011ABF /* HttpClientLib */ = {
+			isa = PBXGroup;
+			children = (
+				B3F94F642324869A00011ABF /* Protocols.swift */,
+				B3F94F81232488C600011ABF /* Builder.swift */,
+				B3F94F662324870200011ABF /* HttpClientURLSession.swift */,
+				B3F94F672324870200011ABF /* URLSession+URLSessionProtocol.swift */,
+			);
+			path = HttpClientLib;
+			sourceTree = "<group>";
+		};
+		B3F94F6F2324874000011ABF /* HttpClientLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */,
+				B3F94F7C2324883700011ABF /* Mocks */,
+				B3F94F722324874000011ABF /* Info.plist */,
+			);
+			path = HttpClientLibTests;
+			sourceTree = "<group>";
+		};
+		B3F94F7C2324883700011ABF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				B3F94F7E2324886800011ABF /* MockURLSessionProtocol.swift */,
+				B3F94F7D2324886800011ABF /* MockURLSessionDataTask.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		B3FC9FD92322FF6900E21E86 /* OperationsLibTests */ = {
 			isa = PBXGroup;
 			children = (
 				B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */,
@@ -439,7 +509,7 @@
 				B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */,
 				B3FC9FDC2322FF6900E21E86 /* Info.plist */,
 			);
-			path = TfLBusOperationsTests;
+			path = OperationsLibTests;
 			sourceTree = "<group>";
 		};
 		B3FC9FF02323D3D800E21E86 /* TfLBusWidgetFeature */ = {
@@ -571,9 +641,9 @@
 			productReference = B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B324A91F2313228E00639923 /* TfLBusOperations */ = {
+		B324A91F2313228E00639923 /* OperationsLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "TfLBusOperations" */;
+			buildConfigurationList = B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "OperationsLib" */;
 			buildPhases = (
 				B324A91C2313228E00639923 /* Sources */,
 				B324A91D2313228E00639923 /* Frameworks */,
@@ -583,14 +653,49 @@
 			);
 			dependencies = (
 			);
-			name = TfLBusOperations;
+			name = OperationsLib;
 			productName = TfLBusOperations;
-			productReference = B324A9202313228E00639923 /* libTfLBusOperations.a */;
+			productReference = B324A9202313228E00639923 /* libOperationsLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B3FC9FD72322FF6900E21E86 /* TfLBusOperationsTests */ = {
+		B3F94F5C2324866400011ABF /* HttpClientLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "TfLBusOperationsTests" */;
+			buildConfigurationList = B3F94F632324866500011ABF /* Build configuration list for PBXNativeTarget "HttpClientLib" */;
+			buildPhases = (
+				B3F94F592324866400011ABF /* Sources */,
+				B3F94F5A2324866400011ABF /* Frameworks */,
+				B3F94F5B2324866400011ABF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HttpClientLib;
+			productName = HttpClient;
+			productReference = B3F94F5D2324866400011ABF /* libHttpClientLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3F94F6D2324874000011ABF /* HttpClientLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F94F762324874000011ABF /* Build configuration list for PBXNativeTarget "HttpClientLibTests" */;
+			buildPhases = (
+				B3F94F6A2324874000011ABF /* Sources */,
+				B3F94F6B2324874000011ABF /* Frameworks */,
+				B3F94F6C2324874000011ABF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3F94F752324874000011ABF /* PBXTargetDependency */,
+			);
+			name = HttpClientLibTests;
+			productName = HttpClientTests;
+			productReference = B3F94F6E2324874000011ABF /* HttpClientLibTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3FC9FD72322FF6900E21E86 /* OperationsLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "OperationsLibTests" */;
 			buildPhases = (
 				B3FC9FD42322FF6900E21E86 /* Sources */,
 				B3FC9FD52322FF6900E21E86 /* Frameworks */,
@@ -601,9 +706,9 @@
 			dependencies = (
 				B3FC9FDF2322FF6900E21E86 /* PBXTargetDependency */,
 			);
-			name = TfLBusOperationsTests;
+			name = OperationsLibTests;
 			productName = TfLBusOperationsTests;
-			productReference = B3FC9FD82322FF6900E21E86 /* TfLBusOperationsTests.xctest */;
+			productReference = B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */ = {
@@ -684,6 +789,14 @@
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
 					};
+					B3F94F5C2324866400011ABF = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					B3F94F6D2324874000011ABF = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
 					B3FC9FD72322FF6900E21E86 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -716,8 +829,10 @@
 				B3FCA00C2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
 				B31A368523100A76008ACD7D /* TfLBusRepository */,
 				B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */,
-				B324A91F2313228E00639923 /* TfLBusOperations */,
-				B3FC9FD72322FF6900E21E86 /* TfLBusOperationsTests */,
+				B324A91F2313228E00639923 /* OperationsLib */,
+				B3FC9FD72322FF6900E21E86 /* OperationsLibTests */,
+				B3F94F5C2324866400011ABF /* HttpClientLib */,
+				B3F94F6D2324874000011ABF /* HttpClientLibTests */,
 			);
 		};
 /* End PBXProject section */
@@ -747,6 +862,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B31A368F23100AA0008ACD7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F94F6C2324874000011ABF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -802,8 +924,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A36B3231044D2008ACD7D /* HttpClientURLSession.swift in Sources */,
-				B30AD5AB23246F1C00B6847E /* URLSession+URLSessionProtocol.swift in Sources */,
 				B31A368923100A76008ACD7D /* Protocols.swift in Sources */,
 				B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */,
 				B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */,
@@ -816,11 +936,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B30AD59E232422FA00B6847E /* MockHttpClient.swift in Sources */,
-				B30AD5A923246B8500B6847E /* MockURLSessionProtocol.swift in Sources */,
-				B30AD5A7232469DE00B6847E /* HttpClientURLSessionTests.swift in Sources */,
 				B30AD5982324165C00B6847E /* TfLWrapperDefaultTests.swift in Sources */,
 				B30AD5A523245B7600B6847E /* UserConfigurationDefaultTests.swift in Sources */,
-				B30AD5AD23246FE400B6847E /* MockURLSessionDataTask.swift in Sources */,
 				B30AD5A323243B5500B6847E /* MockUserDefaults.swift in Sources */,
 				B30AD5A02324287C00B6847E /* HttpClientError+Equatable.swift in Sources */,
 			);
@@ -834,6 +951,27 @@
 				B324A92D2313233900639923 /* Operation+AddDependencies.swift in Sources */,
 				B324A92E2313233900639923 /* Input2OutputOperation.swift in Sources */,
 				B324A92B2313233900639923 /* AsyncOperation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F94F592324866400011ABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F94F652324869A00011ABF /* Protocols.swift in Sources */,
+				B3F94F692324870300011ABF /* URLSession+URLSessionProtocol.swift in Sources */,
+				B3F94F682324870300011ABF /* HttpClientURLSession.swift in Sources */,
+				B3F94F82232488C600011ABF /* Builder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3F94F6A2324874000011ABF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F94F7B2324883000011ABF /* HttpClientURLSessionTests.swift in Sources */,
+				B3F94F7F2324886800011ABF /* MockURLSessionDataTask.swift in Sources */,
+				B3F94F802324886800011ABF /* MockURLSessionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,9 +1030,14 @@
 			target = B31A368523100A76008ACD7D /* TfLBusRepository */;
 			targetProxy = B31A369723100AA0008ACD7D /* PBXContainerItemProxy */;
 		};
+		B3F94F752324874000011ABF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F94F5C2324866400011ABF /* HttpClientLib */;
+			targetProxy = B3F94F742324874000011ABF /* PBXContainerItemProxy */;
+		};
 		B3FC9FDF2322FF6900E21E86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B324A91F2313228E00639923 /* TfLBusOperations */;
+			target = B324A91F2313228E00639923 /* OperationsLib */;
 			targetProxy = B3FC9FDE2322FF6900E21E86 /* PBXContainerItemProxy */;
 		};
 		B3FCA0142323D6A100E21E86 /* PBXTargetDependency */ = {
@@ -1266,18 +1409,96 @@
 			};
 			name = Release;
 		};
-		B3FC9FE02322FF6900E21E86 /* Debug */ = {
+		B3F94F612324866500011ABF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusOperationsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusOperationsTests;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3F94F622324866500011ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3F94F772324874000011ABF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = HttpClientLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.HttpClientLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3F94F782324874000011ABF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = HttpClientLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.HttpClientLibTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3FC9FE02322FF6900E21E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SNKL3EHYH;
+				INFOPLIST_FILE = OperationsLibTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.OperationsLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1289,13 +1510,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusOperationsTests/Info.plist;
+				INFOPLIST_FILE = OperationsLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusOperationsTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.OperationsLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1434,7 +1655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "TfLBusOperations" */ = {
+		B324A9242313228E00639923 /* Build configuration list for PBXNativeTarget "OperationsLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B324A9252313228E00639923 /* Debug */,
@@ -1443,7 +1664,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "TfLBusOperationsTests" */ = {
+		B3F94F632324866500011ABF /* Build configuration list for PBXNativeTarget "HttpClientLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F94F612324866500011ABF /* Debug */,
+				B3F94F622324866500011ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3F94F762324874000011ABF /* Build configuration list for PBXNativeTarget "HttpClientLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F94F772324874000011ABF /* Debug */,
+				B3F94F782324874000011ABF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FC9FE22322FF6900E21E86 /* Build configuration list for PBXNativeTarget "OperationsLibTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3FC9FE02322FF6900E21E86 /* Debug */,

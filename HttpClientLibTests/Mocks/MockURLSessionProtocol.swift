@@ -1,5 +1,5 @@
 import Foundation
-@testable import TfLBusRepository
+@testable import HttpClientLib
 
 final class MockURLSessionProtocol: URLSessionProtocol {
 

@@ -16,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3FC9FD72322FF6900E21E86"
-               BuildableName = "OperationsLibTests.xctest"
-               BlueprintName = "OperationsLibTests"
+               BlueprintIdentifier = "B3F94F6D2324874000011ABF"
+               BuildableName = "HttpClientLibTests.xctest"
+               BlueprintName = "HttpClientLibTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

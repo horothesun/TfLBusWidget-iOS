@@ -1,5 +1,5 @@
 import Foundation
-import TfLBusOperations
+import OperationsLib
 import TfLBusRepository
 
 final class ViewModelOperationQueue {

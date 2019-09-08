@@ -1,10 +1,10 @@
 import Foundation
+import HttpClientLib
 
 public enum Builder {
 
     public static func makeTfLWrapper() -> TfLWrapper {
-        let httpClient = HttpClientURLSession(urlSession: URLSession.shared)
-        return TfLWrapperDefault(httpClient: httpClient)
+        return TfLWrapperDefault(httpClient: HttpClientLib.Builder.makeHttpClient())
     }
 
     public static func makeUserConfiguration() -> UserConfiguration {

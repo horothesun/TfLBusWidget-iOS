@@ -1,5 +1,5 @@
 import XCTest
-import TfLBusOperations
+import OperationsLib
 
 final class Input2OutputOperationTests: XCTestCase {
 

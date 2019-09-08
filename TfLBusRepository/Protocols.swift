@@ -36,27 +36,3 @@ public protocol UserConfiguration {
     var stopId: String? { get set }
     var lineId: String? { get set }
 }
-
-enum HttpClientError: Error {
-    case unknown(Error)
-    case invalidPath
-    case httpStatus(Int)
-}
-
-protocol HttpClient {
-    func fetch(
-        path: String,
-        completion: @escaping (Result<Data, HttpClientError>) -> Void
-    )
-}
-
-protocol URLSessionProtocol {
-    func dataTask(
-        with request: URLRequest,
-        completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
-    ) -> URLSessionDataTaskProtocol
-}
-
-protocol URLSessionDataTaskProtocol {
-    func resume()
-}

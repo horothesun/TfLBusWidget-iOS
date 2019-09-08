@@ -1,4 +1,4 @@
-@testable import TfLBusRepository
+import HttpClientLib
 
 extension HttpClientError: Equatable {
     public static func == (lhs: HttpClientError, rhs: HttpClientError) -> Bool {

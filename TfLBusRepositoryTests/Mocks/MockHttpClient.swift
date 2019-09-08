@@ -1,5 +1,5 @@
 import Foundation
-@testable import TfLBusRepository
+import HttpClientLib
 
 final class MockHttpClient: HttpClient {
 
