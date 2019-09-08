@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3FC9FEE2323D3D700E21E86"
-            BuildableName = "libWidgetLib.a"
-            BlueprintName = "WidgetLib"
+            BuildableName = "libWidgetFeature.a"
+            BlueprintName = "WidgetFeature"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
          <BuildableReference
@@ -79,18 +79,15 @@
             BlueprintName = "HttpClientLib"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B3F94F8B2325601700011ABF"
+            BuildableName = "libMainFeature.a"
+            BlueprintName = "MainFeature"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B31A3636230F62BF008ACD7D"
-               BuildableName = "TfLBusTests.xctest"
-               BlueprintName = "TfLBusTests"
-               ReferencedContainer = "container:TfLBus.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
          <TestableReference
             skipped = "NO">
             <BuildableReference
@@ -116,8 +113,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
-               BuildableName = "WidgetLibTests.xctest"
-               BlueprintName = "WidgetLibTests"
+               BuildableName = "WidgetFeatureTests.xctest"
+               BlueprintName = "WidgetFeatureTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -128,6 +125,16 @@
                BlueprintIdentifier = "B3F94F6D2324874000011ABF"
                BuildableName = "HttpClientLibTests.xctest"
                BlueprintName = "HttpClientLibTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3F94FA5232579C300011ABF"
+               BuildableName = "MainFeatureTests.xctest"
+               BlueprintName = "MainFeatureTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

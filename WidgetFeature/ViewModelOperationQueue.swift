@@ -1,8 +1,7 @@
 import Foundation
 import OperationsLib
-import RepositoryLib
 
-final class ViewModelOperationQueue {
+public final class ViewModelOperationQueue {
 
     private typealias `Self` = ViewModelOperationQueue
     private typealias ResultBusStop = Result<BusStop, TfLWrapperError>
@@ -15,7 +14,7 @@ final class ViewModelOperationQueue {
     private let arrivalsFormatter: ArrivalsFormatter
     private let processingQueue: OperationQueue
 
-    init(
+    public init(
         userConfiguration: UserConfiguration,
         tflWrapper: TfLWrapper,
         arrivalsFormatter: ArrivalsFormatter,
@@ -33,7 +32,7 @@ extension ViewModelOperationQueue: ViewModel {
     private static var openAppMessage: String { return "Open the 'TfL Bus' app 👍" }
     private static var errorMessage: String { return "Oops, an error occurred 🙏" }
 
-    func getDisplayModel(
+    public func getDisplayModel(
         start: @escaping () -> Void,
         success: @escaping (SuccessDisplayModel) -> Void,
         failure: @escaping (FailureDisplayModel) -> Void

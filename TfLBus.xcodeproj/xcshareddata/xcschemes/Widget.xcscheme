@@ -41,15 +41,36 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B3FC9FEE2323D3D700E21E86"
+            BuildableName = "libWidgetFeature.a"
+            BlueprintName = "WidgetFeature"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
+               BuildableName = "WidgetFeatureTests.xctest"
+               BlueprintName = "WidgetFeatureTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B31A3649230F642A008ACD7D"
-            BuildableName = "Widget.appex"
-            BlueprintName = "Widget"
+            BlueprintIdentifier = "B31A3622230F62BD008ACD7D"
+            BuildableName = "TfL Bus.app"
+            BlueprintName = "TfLBus"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

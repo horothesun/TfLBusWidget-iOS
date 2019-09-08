@@ -1,4 +1,4 @@
-import RepositoryLib
+import WidgetFeature
 
 final class MockTfLWrapper: TfLWrapper {
 

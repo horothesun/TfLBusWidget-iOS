@@ -1,4 +1,5 @@
 import UIKit
+import MainFeature
 
 final class MainViewController: UIViewController {
 

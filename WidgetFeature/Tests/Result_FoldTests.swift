@@ -1,5 +1,5 @@
 import XCTest
-import WidgetLib
+import WidgetFeature
 
 final class Result_FoldTests: XCTestCase {
 

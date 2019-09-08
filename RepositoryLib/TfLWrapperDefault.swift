@@ -1,23 +1,25 @@
 import Foundation
+import WidgetFeature
+import MainFeature
 
-final class TfLWrapperDefault {
+public final class TfLWrapperDefault {
 
     private typealias `Self` = TfLWrapperDefault
 
     private let httpClient: HttpClient
 
-    init(httpClient: HttpClient) {
+    public init(httpClient: HttpClient) {
         self.httpClient = httpClient
     }
 }
 
-extension TfLWrapperDefault: TfLWrapper {
+extension TfLWrapperDefault: WidgetFeature.TfLWrapper {
 
     enum TfLWrapperDefaultError: Error { case jsonParsingError }
 
     private var baseURL: String { return "https://tfl-wrapper.herokuapp.com/" }
 
-    func busStop(
+    public func busStop(
         stopId: String,
         completion: @escaping (Result<BusStop, TfLWrapperError>) -> Void
     ) {
@@ -39,7 +41,7 @@ extension TfLWrapperDefault: TfLWrapper {
         }
     }
 
-    func arrivalsInSeconds(
+    public func arrivalsInSeconds(
         stopId: String,
         lineId: String,
         completion: @escaping (Result<[Int], TfLWrapperError>) -> Void
@@ -71,3 +73,5 @@ extension TfLWrapperDefault: TfLWrapper {
         }
     }
 }
+
+extension TfLWrapperDefault: MainFeature.TfLWrapper { }

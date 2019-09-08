@@ -1,7 +1,6 @@
 import Foundation
-import RepositoryLib
 
-final class ArrivalsFormatterDefault: ArrivalsFormatter {
+public final class ArrivalsFormatterDefault: ArrivalsFormatter {
 
     private typealias `Self` = ArrivalsFormatterDefault
 
@@ -9,7 +8,9 @@ final class ArrivalsFormatterDefault: ArrivalsFormatter {
     private static let dueText = "Due"
     private static let arrivalsSeparatorText = ", "
 
-    func arrivalsText(from arrivalsInSeconds: [Int]) -> String {
+    public init() { }
+
+    public func arrivalsText(from arrivalsInSeconds: [Int]) -> String {
         return arrivalsInSeconds.isEmpty
             ? Self.noArrivalsAvailableText
             : arrivalsInSeconds

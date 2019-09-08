@@ -1,7 +1,6 @@
 import Dispatch
-import RepositoryLib
 
-final class ViewModelDispatchQueue {
+public final class ViewModelDispatchQueue {
 
     private typealias `Self` = ViewModelDispatchQueue
 
@@ -10,7 +9,7 @@ final class ViewModelDispatchQueue {
     private let arrivalsFormatter: ArrivalsFormatter
     private let processingQueue: DispatchQueue
 
-    init(
+    public init(
         userConfiguration: UserConfiguration,
         tflWrapper: TfLWrapper,
         arrivalsFormatter: ArrivalsFormatter,
@@ -28,7 +27,7 @@ extension ViewModelDispatchQueue: ViewModel {
     private static var openAppMessage: String { return "Open the 'TfL Bus' app 👍" }
     private static var errorMessage: String { return "Oops, an error occurred 🙏" }
 
-    func getDisplayModel(
+    public func getDisplayModel(
         start:  @escaping () -> Void,
         success: @escaping (SuccessDisplayModel) -> Void,
         failure: @escaping (FailureDisplayModel) -> Void

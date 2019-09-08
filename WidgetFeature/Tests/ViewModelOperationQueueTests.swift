@@ -1,5 +1,5 @@
 import XCTest
-@testable import WidgetLib
+@testable import WidgetFeature
 
 final class ViewModelOperationQueueTests: XCTestCase {
 
