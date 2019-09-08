@@ -1,5 +1,5 @@
 import Foundation
-import HttpClientLib
+import RepositoryLib
 
 final class MockHttpClient: HttpClient {
 

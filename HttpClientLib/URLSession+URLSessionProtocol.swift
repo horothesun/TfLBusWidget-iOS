@@ -1,7 +1,7 @@
 import Foundation
 
 extension URLSession: URLSessionProtocol {
-    func dataTask(
+    public func dataTask(
         with request: URLRequest,
         completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void
     ) -> URLSessionDataTaskProtocol {

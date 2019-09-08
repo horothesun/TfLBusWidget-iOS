@@ -1,16 +1,17 @@
 import Foundation
+import RepositoryLib
 
-final class HttpClientURLSession {
+public final class HttpClientURLSession {
 
     private let urlSession: URLSessionProtocol
 
-    init(urlSession: URLSessionProtocol) {
+    public init(urlSession: URLSessionProtocol) {
         self.urlSession = urlSession
     }
 }
 
 extension HttpClientURLSession: HttpClient {
-    func fetch(
+    public func fetch(
         path: String,
         completion: @escaping (Result<Data, HttpClientError>) -> Void
     ) {

@@ -42,9 +42,9 @@
 		B3F94F7B2324883000011ABF /* HttpClientURLSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */; };
 		B3F94F7F2324886800011ABF /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7D2324886800011ABF /* MockURLSessionDataTask.swift */; };
 		B3F94F802324886800011ABF /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F7E2324886800011ABF /* MockURLSessionProtocol.swift */; };
-		B3F94F82232488C600011ABF /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F94F81232488C600011ABF /* Builder.swift */; };
-		B3F94F8323248A1300011ABF /* libHttpClientLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F94F5D2324866400011ABF /* libHttpClientLib.a */; };
 		B3F94F8423248BD900011ABF /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
+		B3F94F85232529CA00011ABF /* libRepositoryLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libRepositoryLib.a */; };
+		B3F94F8623252B9900011ABF /* libHttpClientLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F94F5D2324866400011ABF /* libHttpClientLib.a */; };
 		B3FC9FDB2322FF6900E21E86 /* OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */; };
 		B3FC9FDD2322FF6900E21E86 /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
 		B3FC9FE423230A9700E21E86 /* Input2OutputOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */; };
@@ -218,7 +218,6 @@
 		B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClientURLSessionTests.swift; sourceTree = "<group>"; };
 		B3F94F7D2324886800011ABF /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
 		B3F94F7E2324886800011ABF /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
-		B3F94F81232488C600011ABF /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationsLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FC9FDA2322FF6900E21E86 /* OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputOperationTests.swift; sourceTree = "<group>"; };
 		B3FC9FDC2322FF6900E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -260,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F94F8623252B9900011ABF /* libHttpClientLib.a in Frameworks */,
 				B3FCA0042323D4AA00E21E86 /* libWidgetLib.a in Frameworks */,
 				B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */,
 			);
@@ -270,7 +270,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F94F8423248BD900011ABF /* libOperationsLib.a in Frameworks */,
-				B3F94F8323248A1300011ABF /* libHttpClientLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +292,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F94F85232529CA00011ABF /* libRepositoryLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,13 +348,9 @@
 				B31A363A230F62BF008ACD7D /* TfLBusTests */,
 				B31A364E230F642B008ACD7D /* Widget */,
 				B3FC9FF02323D3D800E21E86 /* WidgetLib */,
-				B3FCA00E2323D6A100E21E86 /* WidgetLibTests */,
 				B31A368723100A76008ACD7D /* RepositoryLib */,
-				B31A369223100AA0008ACD7D /* RepositoryLibTests */,
 				B324A9212313228E00639923 /* OperationsLib */,
-				B3FC9FD92322FF6900E21E86 /* OperationsLibTests */,
 				B3F94F5E2324866500011ABF /* HttpClientLib */,
-				B3F94F6F2324874000011ABF /* HttpClientLibTests */,
 				B31A364B230F642B008ACD7D /* Frameworks */,
 				B31A3624230F62BD008ACD7D /* Products */,
 			);
@@ -421,11 +417,12 @@
 				B31A369D23100CA5008ACD7D /* Builder.swift */,
 				B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */,
 				B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */,
+				B31A369223100AA0008ACD7D /* Tests */,
 			);
 			path = RepositoryLib;
 			sourceTree = "<group>";
 		};
-		B31A369223100AA0008ACD7D /* RepositoryLibTests */ = {
+		B31A369223100AA0008ACD7D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */,
@@ -434,7 +431,7 @@
 				B30AD5A123243B3B00B6847E /* Mocks */,
 				B31A369523100AA0008ACD7D /* Info.plist */,
 			);
-			path = RepositoryLibTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B31A36B0231025F5008ACD7D /* Main */ = {
@@ -467,6 +464,7 @@
 				B324A9282313233900639923 /* OutputOperation.swift */,
 				B324A9272313233900639923 /* AsyncOperation.swift */,
 				B324A9292313233900639923 /* Operation+AddDependencies.swift */,
+				B3FC9FD92322FF6900E21E86 /* Tests */,
 			);
 			path = OperationsLib;
 			sourceTree = "<group>";
@@ -475,21 +473,21 @@
 			isa = PBXGroup;
 			children = (
 				B3F94F642324869A00011ABF /* Protocols.swift */,
-				B3F94F81232488C600011ABF /* Builder.swift */,
 				B3F94F662324870200011ABF /* HttpClientURLSession.swift */,
 				B3F94F672324870200011ABF /* URLSession+URLSessionProtocol.swift */,
+				B3F94F6F2324874000011ABF /* Tests */,
 			);
 			path = HttpClientLib;
 			sourceTree = "<group>";
 		};
-		B3F94F6F2324874000011ABF /* HttpClientLibTests */ = {
+		B3F94F6F2324874000011ABF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B3F94F7A2324883000011ABF /* HttpClientURLSessionTests.swift */,
 				B3F94F7C2324883700011ABF /* Mocks */,
 				B3F94F722324874000011ABF /* Info.plist */,
 			);
-			path = HttpClientLibTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B3F94F7C2324883700011ABF /* Mocks */ = {
@@ -501,7 +499,7 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		B3FC9FD92322FF6900E21E86 /* OperationsLibTests */ = {
+		B3FC9FD92322FF6900E21E86 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */,
@@ -509,7 +507,7 @@
 				B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */,
 				B3FC9FDC2322FF6900E21E86 /* Info.plist */,
 			);
-			path = OperationsLibTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B3FC9FF02323D3D800E21E86 /* WidgetLib */ = {
@@ -521,21 +519,22 @@
 				B3FC9FF72323D47200E21E86 /* ViewModelOperationQueue.swift */,
 				B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */,
 				B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */,
+				B3FCA00E2323D6A100E21E86 /* Tests */,
 			);
 			path = WidgetLib;
 			sourceTree = "<group>";
 		};
-		B3FCA00E2323D6A100E21E86 /* WidgetLibTests */ = {
+		B3FCA00E2323D6A100E21E86 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				B30AD5992324191F00B6847E /* ArrivalsFormatterDefaultTests.swift */,
 				B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */,
 				B30AD59B23241CC500B6847E /* ViewModelDispatchQueueTests.swift */,
 				B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */,
-				B3FCA0112323D6A100E21E86 /* Info.plist */,
 				B3FCA01E2323F3C400E21E86 /* Mocks */,
+				B3FCA0112323D6A100E21E86 /* Info.plist */,
 			);
-			path = WidgetLibTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		B3FCA01E2323F3C400E21E86 /* Mocks */ = {
@@ -961,7 +960,6 @@
 				B3F94F652324869A00011ABF /* Protocols.swift in Sources */,
 				B3F94F692324870300011ABF /* URLSession+URLSessionProtocol.swift in Sources */,
 				B3F94F682324870300011ABF /* HttpClientURLSession.swift in Sources */,
-				B3F94F82232488C600011ABF /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,7 +1335,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = RepositoryLibTests/Info.plist;
+				INFOPLIST_FILE = RepositoryLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1357,7 +1355,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = RepositoryLibTests/Info.plist;
+				INFOPLIST_FILE = RepositoryLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1454,7 +1452,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = HttpClientLibTests/Info.plist;
+				INFOPLIST_FILE = HttpClientLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1474,7 +1472,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = HttpClientLibTests/Info.plist;
+				INFOPLIST_FILE = HttpClientLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1492,7 +1490,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = OperationsLibTests/Info.plist;
+				INFOPLIST_FILE = OperationsLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1510,7 +1508,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = OperationsLibTests/Info.plist;
+				INFOPLIST_FILE = OperationsLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1567,7 +1565,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = WidgetLibTests/Info.plist;
+				INFOPLIST_FILE = WidgetLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1585,7 +1583,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = WidgetLibTests/Info.plist;
+				INFOPLIST_FILE = WidgetLib/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,5 +1,6 @@
 import UIKit
 import NotificationCenter
+import HttpClientLib
 import WidgetLib
 
 @objc (ViewController)
@@ -43,7 +44,7 @@ final class ViewController: UIViewController {
         return activityIndicator
     }()
 
-    private let viewModel = Builder.makeViewModel()
+    private let viewModel = Builder.makeViewModel(httpClient: HttpClientURLSession(urlSession: URLSession.shared))
 
     override func loadView() {
         super.loadView()

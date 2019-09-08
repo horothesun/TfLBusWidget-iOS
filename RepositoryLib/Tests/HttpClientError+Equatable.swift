@@ -1,4 +1,4 @@
-import HttpClientLib
+import RepositoryLib
 
 extension HttpClientError: Equatable {
     public static func == (lhs: HttpClientError, rhs: HttpClientError) -> Bool {

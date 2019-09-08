@@ -1,5 +1,4 @@
 import XCTest
-import HttpClientLib
 @testable import RepositoryLib
 
 final class TfLWrapperDefaultTests: XCTestCase {
