@@ -1,5 +1,5 @@
-import TfLBusRepository
-@testable import TfLBusWidgetFeature
+import RepositoryLib
+@testable import WidgetLib
 
 final class MockArrivalsFormatter: ArrivalsFormatter {
 

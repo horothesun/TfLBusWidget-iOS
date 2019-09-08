@@ -1,5 +1,5 @@
 import Foundation
-import TfLBusRepository
+import RepositoryLib
 
 public struct SuccessDisplayModel {
     public let busStopCode: String

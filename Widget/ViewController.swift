@@ -1,6 +1,6 @@
 import UIKit
 import NotificationCenter
-import TfLBusWidgetFeature
+import WidgetLib
 
 @objc (ViewController)
 

@@ -1,5 +1,5 @@
 import XCTest
-import TfLBusWidgetFeature
+import WidgetLib
 
 final class Result_FoldTests: XCTestCase {
 

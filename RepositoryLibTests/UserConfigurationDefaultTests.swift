@@ -1,5 +1,5 @@
 import XCTest
-@testable import TfLBusRepository
+@testable import RepositoryLib
 
 final class UserConfigurationDefaultTests: XCTestCase {
 

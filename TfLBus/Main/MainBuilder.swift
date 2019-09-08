@@ -1,10 +1,10 @@
-import TfLBusRepository
 import UIKit
+import RepositoryLib
 
 enum MainBuilder {
 
     static func makeViewController() -> UIViewController {
-        let userConfiguration = TfLBusRepository.Builder.makeUserConfiguration()
+        let userConfiguration = RepositoryLib.Builder.makeUserConfiguration()
         let viewModel = MainViewModelDefault(userConfiguration: userConfiguration)
         return MainViewController(viewModel: viewModel)
     }

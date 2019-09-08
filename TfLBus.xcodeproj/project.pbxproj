@@ -21,13 +21,13 @@
 		B31A362E230F62BF008ACD7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B31A362D230F62BF008ACD7D /* Assets.xcassets */; };
 		B31A3631230F62BF008ACD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31A362F230F62BF008ACD7D /* LaunchScreen.storyboard */; };
 		B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A364C230F642B008ACD7D /* NotificationCenter.framework */; };
-		B31A3657230F642B008ACD7D /* TfLBusWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B31A364A230F642A008ACD7D /* TfLBusWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B31A3657230F642B008ACD7D /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B31A364A230F642A008ACD7D /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B31A368923100A76008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A368823100A76008ACD7D /* Protocols.swift */; };
-		B31A369623100AA0008ACD7D /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
+		B31A369623100AA0008ACD7D /* libRepositoryLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libRepositoryLib.a */; };
 		B31A369E23100CA5008ACD7D /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A369D23100CA5008ACD7D /* Builder.swift */; };
 		B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */; };
 		B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */; };
-		B31A36A923102147008ACD7D /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
+		B31A36A923102147008ACD7D /* libRepositoryLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libRepositoryLib.a */; };
 		B31A36AB23102451008ACD7D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AA23102451008ACD7D /* MainCoordinator.swift */; };
 		B31A36AD23102548008ACD7D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AC23102548008ACD7D /* MainViewModel.swift */; };
 		B31A36AF231025A3008ACD7D /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36AE231025A3008ACD7D /* MainBuilder.swift */; };
@@ -56,11 +56,11 @@
 		B3FCA0012323D47200E21E86 /* ArrivalsFormatterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFA2323D47200E21E86 /* ArrivalsFormatterDefault.swift */; };
 		B3FCA0022323D47200E21E86 /* Result+Fold.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */; };
 		B3FCA0032323D47200E21E86 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC9FFC2323D47200E21E86 /* Builder.swift */; };
-		B3FCA0042323D4AA00E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
+		B3FCA0042323D4AA00E21E86 /* libWidgetLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libWidgetLib.a */; };
 		B3FCA0062323D55500E21E86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0052323D55500E21E86 /* ViewController.swift */; };
 		B3FCA0072323D59C00E21E86 /* libOperationsLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B324A9202313228E00639923 /* libOperationsLib.a */; };
-		B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libTfLBusRepository.a */; };
-		B3FCA0122323D6A100E21E86 /* libTfLBusWidgetFeature.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */; };
+		B3FCA0082323D59C00E21E86 /* libRepositoryLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libRepositoryLib.a */; };
+		B3FCA0122323D6A100E21E86 /* libWidgetLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC9FEF2323D3D700E21E86 /* libWidgetLib.a */; };
 		B3FCA0192323D7BA00E21E86 /* Result_FoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */; };
 		B3FCA01B2323D9E700E21E86 /* ViewModelOperationQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */; };
 		B3FCA01D2323F3BA00E21E86 /* MockUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FCA01C2323F3BA00E21E86 /* MockUserConfiguration.swift */; };
@@ -118,7 +118,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B31A3657230F642B008ACD7D /* TfLBusWidget.appex in Embed App Extensions */,
+				B31A3657230F642B008ACD7D /* Widget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,12 +189,12 @@
 		B31A3632230F62BF008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A3637230F62BF008ACD7D /* TfLBusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A363D230F62BF008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31A364A230F642A008ACD7D /* TfLBusWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TfLBusWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31A364A230F642A008ACD7D /* Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Widget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A364C230F642B008ACD7D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B31A3654230F642B008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B31A368623100A76008ACD7D /* libTfLBusRepository.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusRepository.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31A368623100A76008ACD7D /* libRepositoryLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRepositoryLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A368823100A76008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusRepositoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31A369123100AA0008ACD7D /* RepositoryLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A369523100AA0008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A369D23100CA5008ACD7D /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLWrapperDefault.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		B3FC9FE323230A9700E21E86 /* Input2OutputOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input2OutputOperationTests.swift; sourceTree = "<group>"; };
 		B3FC9FE7232313CE00E21E86 /* Operation+AddDependenciesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Operation+AddDependenciesTests.swift"; sourceTree = "<group>"; };
 		B3FC9FE9232318B800E21E86 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
-		B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTfLBusWidgetFeature.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FC9FEF2323D3D700E21E86 /* libWidgetLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWidgetLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelDispatchQueue.swift; sourceTree = "<group>"; };
 		B3FC9FF72323D47200E21E86 /* ViewModelOperationQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueue.swift; sourceTree = "<group>"; };
 		B3FC9FF92323D47200E21E86 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -233,7 +233,7 @@
 		B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Result+Fold.swift"; sourceTree = "<group>"; };
 		B3FC9FFC2323D47200E21E86 /* Builder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		B3FCA0052323D55500E21E86 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TfLBusWidgetFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FCA00D2323D6A100E21E86 /* WidgetLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WidgetLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FCA0112323D6A100E21E86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3FCA0182323D7BA00E21E86 /* Result_FoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_FoldTests.swift; sourceTree = "<group>"; };
 		B3FCA01A2323D9E700E21E86 /* ViewModelOperationQueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelOperationQueueTests.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A36A923102147008ACD7D /* libTfLBusRepository.a in Frameworks */,
+				B31A36A923102147008ACD7D /* libRepositoryLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FCA0042323D4AA00E21E86 /* libTfLBusWidgetFeature.a in Frameworks */,
+				B3FCA0042323D4AA00E21E86 /* libWidgetLib.a in Frameworks */,
 				B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +278,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A369623100AA0008ACD7D /* libTfLBusRepository.a in Frameworks */,
+				B31A369623100AA0008ACD7D /* libRepositoryLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3FCA0072323D59C00E21E86 /* libOperationsLib.a in Frameworks */,
-				B3FCA0082323D59C00E21E86 /* libTfLBusRepository.a in Frameworks */,
+				B3FCA0082323D59C00E21E86 /* libRepositoryLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3FCA0122323D6A100E21E86 /* libTfLBusWidgetFeature.a in Frameworks */,
+				B3FCA0122323D6A100E21E86 /* libWidgetLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,11 +346,11 @@
 			children = (
 				B31A3625230F62BD008ACD7D /* TfLBus */,
 				B31A363A230F62BF008ACD7D /* TfLBusTests */,
-				B31A364E230F642B008ACD7D /* TfLBusWidget */,
-				B3FC9FF02323D3D800E21E86 /* TfLBusWidgetFeature */,
-				B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
-				B31A368723100A76008ACD7D /* TfLBusRepository */,
-				B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */,
+				B31A364E230F642B008ACD7D /* Widget */,
+				B3FC9FF02323D3D800E21E86 /* WidgetLib */,
+				B3FCA00E2323D6A100E21E86 /* WidgetLibTests */,
+				B31A368723100A76008ACD7D /* RepositoryLib */,
+				B31A369223100AA0008ACD7D /* RepositoryLibTests */,
 				B324A9212313228E00639923 /* OperationsLib */,
 				B3FC9FD92322FF6900E21E86 /* OperationsLibTests */,
 				B3F94F5E2324866500011ABF /* HttpClientLib */,
@@ -365,13 +365,13 @@
 			children = (
 				B31A3623230F62BD008ACD7D /* TfL Bus.app */,
 				B31A3637230F62BF008ACD7D /* TfLBusTests.xctest */,
-				B31A364A230F642A008ACD7D /* TfLBusWidget.appex */,
-				B31A368623100A76008ACD7D /* libTfLBusRepository.a */,
-				B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */,
+				B31A364A230F642A008ACD7D /* Widget.appex */,
+				B31A368623100A76008ACD7D /* libRepositoryLib.a */,
+				B31A369123100AA0008ACD7D /* RepositoryLibTests.xctest */,
 				B324A9202313228E00639923 /* libOperationsLib.a */,
 				B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */,
-				B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */,
-				B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */,
+				B3FC9FEF2323D3D700E21E86 /* libWidgetLib.a */,
+				B3FCA00D2323D6A100E21E86 /* WidgetLibTests.xctest */,
 				B3F94F5D2324866400011ABF /* libHttpClientLib.a */,
 				B3F94F6E2324874000011ABF /* HttpClientLibTests.xctest */,
 			);
@@ -404,17 +404,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B31A364E230F642B008ACD7D /* TfLBusWidget */ = {
+		B31A364E230F642B008ACD7D /* Widget */ = {
 			isa = PBXGroup;
 			children = (
 				B3FCA0052323D55500E21E86 /* ViewController.swift */,
 				B31A36A823102094008ACD7D /* TfLBusWidget.entitlements */,
 				B31A3654230F642B008ACD7D /* Info.plist */,
 			);
-			path = TfLBusWidget;
+			path = Widget;
 			sourceTree = "<group>";
 		};
-		B31A368723100A76008ACD7D /* TfLBusRepository */ = {
+		B31A368723100A76008ACD7D /* RepositoryLib */ = {
 			isa = PBXGroup;
 			children = (
 				B31A368823100A76008ACD7D /* Protocols.swift */,
@@ -422,10 +422,10 @@
 				B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */,
 				B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */,
 			);
-			path = TfLBusRepository;
+			path = RepositoryLib;
 			sourceTree = "<group>";
 		};
-		B31A369223100AA0008ACD7D /* TfLBusRepositoryTests */ = {
+		B31A369223100AA0008ACD7D /* RepositoryLibTests */ = {
 			isa = PBXGroup;
 			children = (
 				B30AD5972324165C00B6847E /* TfLWrapperDefaultTests.swift */,
@@ -434,7 +434,7 @@
 				B30AD5A123243B3B00B6847E /* Mocks */,
 				B31A369523100AA0008ACD7D /* Info.plist */,
 			);
-			path = TfLBusRepositoryTests;
+			path = RepositoryLibTests;
 			sourceTree = "<group>";
 		};
 		B31A36B0231025F5008ACD7D /* Main */ = {
@@ -512,7 +512,7 @@
 			path = OperationsLibTests;
 			sourceTree = "<group>";
 		};
-		B3FC9FF02323D3D800E21E86 /* TfLBusWidgetFeature */ = {
+		B3FC9FF02323D3D800E21E86 /* WidgetLib */ = {
 			isa = PBXGroup;
 			children = (
 				B3FC9FF92323D47200E21E86 /* Protocols.swift */,
@@ -522,10 +522,10 @@
 				B3FC9FF62323D47200E21E86 /* ViewModelDispatchQueue.swift */,
 				B3FC9FFB2323D47200E21E86 /* Result+Fold.swift */,
 			);
-			path = TfLBusWidgetFeature;
+			path = WidgetLib;
 			sourceTree = "<group>";
 		};
-		B3FCA00E2323D6A100E21E86 /* TfLBusWidgetFeatureTests */ = {
+		B3FCA00E2323D6A100E21E86 /* WidgetLibTests */ = {
 			isa = PBXGroup;
 			children = (
 				B30AD5992324191F00B6847E /* ArrivalsFormatterDefaultTests.swift */,
@@ -535,7 +535,7 @@
 				B3FCA0112323D6A100E21E86 /* Info.plist */,
 				B3FCA01E2323F3C400E21E86 /* Mocks */,
 			);
-			path = TfLBusWidgetFeatureTests;
+			path = WidgetLibTests;
 			sourceTree = "<group>";
 		};
 		B3FCA01E2323F3C400E21E86 /* Mocks */ = {
@@ -589,9 +589,9 @@
 			productReference = B31A3637230F62BF008ACD7D /* TfLBusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B31A3649230F642A008ACD7D /* TfLBusWidget */ = {
+		B31A3649230F642A008ACD7D /* Widget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31A3658230F642B008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusWidget" */;
+			buildConfigurationList = B31A3658230F642B008ACD7D /* Build configuration list for PBXNativeTarget "Widget" */;
 			buildPhases = (
 				B31A3646230F642A008ACD7D /* Sources */,
 				B31A3647230F642A008ACD7D /* Frameworks */,
@@ -601,14 +601,14 @@
 			);
 			dependencies = (
 			);
-			name = TfLBusWidget;
+			name = Widget;
 			productName = TfLBusWidget;
-			productReference = B31A364A230F642A008ACD7D /* TfLBusWidget.appex */;
+			productReference = B31A364A230F642A008ACD7D /* Widget.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		B31A368523100A76008ACD7D /* TfLBusRepository */ = {
+		B31A368523100A76008ACD7D /* RepositoryLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31A368A23100A76008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusRepository" */;
+			buildConfigurationList = B31A368A23100A76008ACD7D /* Build configuration list for PBXNativeTarget "RepositoryLib" */;
 			buildPhases = (
 				B31A368223100A76008ACD7D /* Sources */,
 				B31A368323100A76008ACD7D /* Frameworks */,
@@ -618,14 +618,14 @@
 			);
 			dependencies = (
 			);
-			name = TfLBusRepository;
+			name = RepositoryLib;
 			productName = TfLBusRepository;
-			productReference = B31A368623100A76008ACD7D /* libTfLBusRepository.a */;
+			productReference = B31A368623100A76008ACD7D /* libRepositoryLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */ = {
+		B31A369023100AA0008ACD7D /* RepositoryLibTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31A369923100AA0008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusRepositoryTests" */;
+			buildConfigurationList = B31A369923100AA0008ACD7D /* Build configuration list for PBXNativeTarget "RepositoryLibTests" */;
 			buildPhases = (
 				B31A368D23100AA0008ACD7D /* Sources */,
 				B31A368E23100AA0008ACD7D /* Frameworks */,
@@ -636,9 +636,9 @@
 			dependencies = (
 				B31A369823100AA0008ACD7D /* PBXTargetDependency */,
 			);
-			name = TfLBusRepositoryTests;
+			name = RepositoryLibTests;
 			productName = TfLBusRepositoryTests;
-			productReference = B31A369123100AA0008ACD7D /* TfLBusRepositoryTests.xctest */;
+			productReference = B31A369123100AA0008ACD7D /* RepositoryLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		B324A91F2313228E00639923 /* OperationsLib */ = {
@@ -711,9 +711,9 @@
 			productReference = B3FC9FD82322FF6900E21E86 /* OperationsLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */ = {
+		B3FC9FEE2323D3D700E21E86 /* WidgetLib */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeature" */;
+			buildConfigurationList = B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "WidgetLib" */;
 			buildPhases = (
 				B3FC9FEB2323D3D700E21E86 /* Sources */,
 				B3FC9FEC2323D3D700E21E86 /* Frameworks */,
@@ -723,14 +723,14 @@
 			);
 			dependencies = (
 			);
-			name = TfLBusWidgetFeature;
+			name = WidgetLib;
 			productName = TfLBusWidgetFeature;
-			productReference = B3FC9FEF2323D3D700E21E86 /* libTfLBusWidgetFeature.a */;
+			productReference = B3FC9FEF2323D3D700E21E86 /* libWidgetLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		B3FCA00C2323D6A100E21E86 /* TfLBusWidgetFeatureTests */ = {
+		B3FCA00C2323D6A100E21E86 /* WidgetLibTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeatureTests" */;
+			buildConfigurationList = B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "WidgetLibTests" */;
 			buildPhases = (
 				B3FCA0092323D6A100E21E86 /* Sources */,
 				B3FCA00A2323D6A100E21E86 /* Frameworks */,
@@ -741,9 +741,9 @@
 			dependencies = (
 				B3FCA0142323D6A100E21E86 /* PBXTargetDependency */,
 			);
-			name = TfLBusWidgetFeatureTests;
+			name = WidgetLibTests;
 			productName = TfLBusWidgetFeatureTests;
-			productReference = B3FCA00D2323D6A100E21E86 /* TfLBusWidgetFeatureTests.xctest */;
+			productReference = B3FCA00D2323D6A100E21E86 /* WidgetLibTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -824,11 +824,11 @@
 			targets = (
 				B31A3622230F62BD008ACD7D /* TfLBus */,
 				B31A3636230F62BF008ACD7D /* TfLBusTests */,
-				B31A3649230F642A008ACD7D /* TfLBusWidget */,
-				B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */,
-				B3FCA00C2323D6A100E21E86 /* TfLBusWidgetFeatureTests */,
-				B31A368523100A76008ACD7D /* TfLBusRepository */,
-				B31A369023100AA0008ACD7D /* TfLBusRepositoryTests */,
+				B31A3649230F642A008ACD7D /* Widget */,
+				B3FC9FEE2323D3D700E21E86 /* WidgetLib */,
+				B3FCA00C2323D6A100E21E86 /* WidgetLibTests */,
+				B31A368523100A76008ACD7D /* RepositoryLib */,
+				B31A369023100AA0008ACD7D /* RepositoryLibTests */,
 				B324A91F2313228E00639923 /* OperationsLib */,
 				B3FC9FD72322FF6900E21E86 /* OperationsLibTests */,
 				B3F94F5C2324866400011ABF /* HttpClientLib */,
@@ -1022,12 +1022,12 @@
 		};
 		B31A3656230F642B008ACD7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B31A3649230F642A008ACD7D /* TfLBusWidget */;
+			target = B31A3649230F642A008ACD7D /* Widget */;
 			targetProxy = B31A3655230F642B008ACD7D /* PBXContainerItemProxy */;
 		};
 		B31A369823100AA0008ACD7D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B31A368523100A76008ACD7D /* TfLBusRepository */;
+			target = B31A368523100A76008ACD7D /* RepositoryLib */;
 			targetProxy = B31A369723100AA0008ACD7D /* PBXContainerItemProxy */;
 		};
 		B3F94F752324874000011ABF /* PBXTargetDependency */ = {
@@ -1042,7 +1042,7 @@
 		};
 		B3FCA0142323D6A100E21E86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B3FC9FEE2323D3D700E21E86 /* TfLBusWidgetFeature */;
+			target = B3FC9FEE2323D3D700E21E86 /* WidgetLib */;
 			targetProxy = B3FCA0132323D6A100E21E86 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1266,16 +1266,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TfLBusWidget/TfLBusWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Widget/TfLBusWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusWidget/Info.plist;
+				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus.TfLBusWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1288,16 +1288,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = TfLBusWidget/TfLBusWidget.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Widget/TfLBusWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusWidget/Info.plist;
+				INFOPLIST_FILE = Widget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus.TfLBusWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBus.Widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1337,13 +1337,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusRepositoryTests/Info.plist;
+				INFOPLIST_FILE = RepositoryLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusRepositoryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.RepositoryLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1357,13 +1357,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusRepositoryTests/Info.plist;
+				INFOPLIST_FILE = RepositoryLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusRepositoryTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.RepositoryLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1567,13 +1567,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusWidgetFeatureTests/Info.plist;
+				INFOPLIST_FILE = WidgetLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusWidgetFeatureTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.WidgetLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1585,13 +1585,13 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SNKL3EHYH;
-				INFOPLIST_FILE = TfLBusWidgetFeatureTests/Info.plist;
+				INFOPLIST_FILE = WidgetLibTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.TfLBusWidgetFeatureTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horothesun.WidgetLibTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1628,7 +1628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31A3658230F642B008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusWidget" */ = {
+		B31A3658230F642B008ACD7D /* Build configuration list for PBXNativeTarget "Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31A3659230F642B008ACD7D /* Debug */,
@@ -1637,7 +1637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31A368A23100A76008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusRepository" */ = {
+		B31A368A23100A76008ACD7D /* Build configuration list for PBXNativeTarget "RepositoryLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31A368B23100A76008ACD7D /* Debug */,
@@ -1646,7 +1646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31A369923100AA0008ACD7D /* Build configuration list for PBXNativeTarget "TfLBusRepositoryTests" */ = {
+		B31A369923100AA0008ACD7D /* Build configuration list for PBXNativeTarget "RepositoryLibTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31A369A23100AA0008ACD7D /* Debug */,
@@ -1691,7 +1691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeature" */ = {
+		B3FC9FF32323D3D800E21E86 /* Build configuration list for PBXNativeTarget "WidgetLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3FC9FF42323D3D800E21E86 /* Debug */,
@@ -1700,7 +1700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "TfLBusWidgetFeatureTests" */ = {
+		B3FCA0152323D6A100E21E86 /* Build configuration list for PBXNativeTarget "WidgetLibTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B3FCA0162323D6A100E21E86 /* Debug */,

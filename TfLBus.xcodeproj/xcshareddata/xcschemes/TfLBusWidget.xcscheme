@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B31A3649230F642A008ACD7D"
-               BuildableName = "TfLBusWidget.appex"
-               BlueprintName = "TfLBusWidget"
+               BuildableName = "Widget.appex"
+               BlueprintName = "Widget"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B31A3649230F642A008ACD7D"
-            BuildableName = "TfLBusWidget.appex"
-            BlueprintName = "TfLBusWidget"
+            BuildableName = "Widget.appex"
+            BlueprintName = "Widget"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

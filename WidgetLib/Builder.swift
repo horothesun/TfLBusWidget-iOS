@@ -1,13 +1,13 @@
 import Foundation
-import TfLBusRepository
+import RepositoryLib
 
 public enum Builder {
 
     // DispatchQueue-based implementation
 //    public static func makeViewModel() -> ViewModel {
 //        return ViewModelDispatchQueue(
-//            userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
-//            tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
+//            userConfiguration: RepositoryLib.Builder.makeUserConfiguration(),
+//            tflWrapper: RepositoryLib.Builder.makeTfLWrapper(),
 //            arrivalsFormatter: ArrivalsFormatterDefault(),
 //            processingQueue: .global(qos: .userInitiated)
 //        )
@@ -16,8 +16,8 @@ public enum Builder {
     // OperationQueue-based implementation
     public static func makeViewModel() -> ViewModel {
         return ViewModelOperationQueue(
-            userConfiguration: TfLBusRepository.Builder.makeUserConfiguration(),
-            tflWrapper: TfLBusRepository.Builder.makeTfLWrapper(),
+            userConfiguration: RepositoryLib.Builder.makeUserConfiguration(),
+            tflWrapper: RepositoryLib.Builder.makeTfLWrapper(),
             arrivalsFormatter: ArrivalsFormatterDefault(),
             processingQueue: makeConcurrentQueue()
         )

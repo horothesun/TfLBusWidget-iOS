@@ -1,4 +1,4 @@
-import TfLBusRepository
+import RepositoryLib
 
 protocol MainViewModel {
     var title: String { get }

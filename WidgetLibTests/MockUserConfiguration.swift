@@ -1,4 +1,4 @@
-import TfLBusRepository
+import RepositoryLib
 
 final class MockUserConfiguration: UserConfiguration {
     var stopId: String?

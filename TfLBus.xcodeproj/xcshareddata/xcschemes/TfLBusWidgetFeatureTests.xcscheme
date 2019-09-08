@@ -17,8 +17,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
-               BuildableName = "TfLBusWidgetFeatureTests.xctest"
-               BlueprintName = "TfLBusWidgetFeatureTests"
+               BuildableName = "WidgetLibTests.xctest"
+               BlueprintName = "WidgetLibTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

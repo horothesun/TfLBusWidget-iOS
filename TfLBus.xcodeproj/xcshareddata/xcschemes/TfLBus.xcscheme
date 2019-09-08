@@ -61,15 +61,15 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B31A368523100A76008ACD7D"
-            BuildableName = "libTfLBusRepository.a"
-            BlueprintName = "TfLBusRepository"
+            BuildableName = "libRepositoryLib.a"
+            BlueprintName = "RepositoryLib"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3FC9FEE2323D3D700E21E86"
-            BuildableName = "libTfLBusWidgetFeature.a"
-            BlueprintName = "TfLBusWidgetFeature"
+            BuildableName = "libWidgetLib.a"
+            BlueprintName = "WidgetLib"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
          <BuildableReference
@@ -106,8 +106,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B31A369023100AA0008ACD7D"
-               BuildableName = "TfLBusRepositoryTests.xctest"
-               BlueprintName = "TfLBusRepositoryTests"
+               BuildableName = "RepositoryLibTests.xctest"
+               BlueprintName = "RepositoryLibTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -116,8 +116,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
-               BuildableName = "TfLBusWidgetFeatureTests.xctest"
-               BlueprintName = "TfLBusWidgetFeatureTests"
+               BuildableName = "WidgetLibTests.xctest"
+               BlueprintName = "WidgetLibTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

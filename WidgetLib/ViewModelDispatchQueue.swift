@@ -1,5 +1,5 @@
-import TfLBusRepository
 import Dispatch
+import RepositoryLib
 
 final class ViewModelDispatchQueue {
 
