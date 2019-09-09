@@ -1,5 +1,5 @@
 import XCTest
-@testable import HttpClientLib
+import HttpClientLib
 
 final class HttpClientURLSessionTests: XCTestCase {
 

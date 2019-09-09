@@ -1,5 +1,5 @@
 import XCTest
-@testable import RepositoryLib
+import RepositoryLib
 
 final class UserConfigurationDefaultTests: XCTestCase {
 

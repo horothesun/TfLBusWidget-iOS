@@ -1,5 +1,4 @@
-import RepositoryLib
-@testable import WidgetFeature
+import WidgetFeature
 
 final class MockArrivalsFormatter: ArrivalsFormatter {
 
