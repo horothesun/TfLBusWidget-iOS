@@ -1,7 +1,7 @@
 import UIKit
 import NotificationCenter
 import HttpClientLib
-import WidgetFeature
+import WidgetUseCases
 
 @objc (ViewController)
 

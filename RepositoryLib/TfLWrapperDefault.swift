@@ -1,6 +1,11 @@
 import Foundation
-import WidgetFeature
-import MainFeature
+import WidgetUseCases
+
+struct ArrivalsResponse: Codable {
+    let stopId: String
+    let lineId: String
+    let arrivalsInSeconds: [Int]
+}
 
 public final class TfLWrapperDefault {
 
@@ -13,7 +18,7 @@ public final class TfLWrapperDefault {
     }
 }
 
-extension TfLWrapperDefault: WidgetFeature.TfLWrapper {
+extension TfLWrapperDefault: WidgetUseCases.TfLWrapper {
 
     enum TfLWrapperDefaultError: Error { case jsonParsingError }
 
@@ -23,6 +28,7 @@ extension TfLWrapperDefault: WidgetFeature.TfLWrapper {
         stopId: String,
         completion: @escaping (Result<BusStop, TfLWrapperError>) -> Void
     ) {
+//        Thread.sleep(forTimeInterval: 1)
 //        completion(.success(BusStop(id: "490001302S", streetCode: "S", stopName: "UPPER HOLLOWAY STATION")))
 
 //        completion(.failure(.generic(TfLWrapperDefaultError.jsonParsingError)))
@@ -46,7 +52,8 @@ extension TfLWrapperDefault: WidgetFeature.TfLWrapper {
         lineId: String,
         completion: @escaping (Result<[Int], TfLWrapperError>) -> Void
     ) {
-//        completion(.success([20, 250]))
+//        Thread.sleep(forTimeInterval: 4)
+//        completion(.success([20, 250, 300, 400, 500, 600]))
 
 //        completion(.failure(.generic(TfLWrapperDefaultError.jsonParsingError)))
 
@@ -73,5 +80,3 @@ extension TfLWrapperDefault: WidgetFeature.TfLWrapper {
         }
     }
 }
-
-extension TfLWrapperDefault: MainFeature.TfLWrapper { }

@@ -1,22 +1,26 @@
-import Dispatch
+import Foundation
+import WidgetUseCases
 
-public final class ViewModelDispatchQueue {
+final class ViewModelDispatchQueue {
 
     private typealias `Self` = ViewModelDispatchQueue
 
-    private let userConfiguration: UserConfiguration
-    private let tflWrapper: TfLWrapper
+    private let stopAndLineIdsUseCase: StopAndLineIdsUseCase
+    private let busStopUseCase: BusStopUseCase
+    private let arrivalsInMinutesUseCase: ArrivalsInMinutesUseCase
     private let arrivalsFormatter: ArrivalsFormatter
     private let processingQueue: DispatchQueue
 
-    public init(
-        userConfiguration: UserConfiguration,
-        tflWrapper: TfLWrapper,
+    init(
+        stopAndLineIdsUseCase: StopAndLineIdsUseCase,
+        busStopUseCase: BusStopUseCase,
+        arrivalsInMinutesUseCase: ArrivalsInMinutesUseCase,
         arrivalsFormatter: ArrivalsFormatter,
         processingQueue: DispatchQueue
     ) {
-        self.userConfiguration = userConfiguration
-        self.tflWrapper = tflWrapper
+        self.stopAndLineIdsUseCase = stopAndLineIdsUseCase
+        self.busStopUseCase = busStopUseCase
+        self.arrivalsInMinutesUseCase = arrivalsInMinutesUseCase
         self.arrivalsFormatter = arrivalsFormatter
         self.processingQueue = processingQueue
     }
@@ -24,32 +28,29 @@ public final class ViewModelDispatchQueue {
 
 extension ViewModelDispatchQueue: ViewModel {
 
-    private static var openAppMessage: String { return "Open the 'TfL Bus' app 👍" }
+    private static var openAppMessage: String { return "Launch the 'TfL Bus' app 👍" }
     private static var errorMessage: String { return "Oops, an error occurred 🙏" }
 
-    public func getDisplayModel(
+    func getDisplayModel(
         start:  @escaping () -> Void,
         success: @escaping (SuccessDisplayModel) -> Void,
         failure: @escaping (FailureDisplayModel) -> Void
     ) {
         DispatchQueue.main.async(execute: start)
 
-        processingQueue.async { [userConfiguration, tflWrapper, arrivalsFormatter] in
-            guard
-                let stopId = userConfiguration.stopId,
-                let lineId = userConfiguration.lineId
-            else {
+        processingQueue.async { [stopAndLineIdsUseCase, busStopUseCase, arrivalsInMinutesUseCase, arrivalsFormatter] in
+            guard let (stopId, lineId) = stopAndLineIdsUseCase.stopAndLineIds() else {
                 DispatchQueue.main.async { failure(.init(message: Self.openAppMessage)) }
                 return
             }
 
             // sequential calls ☹️
-            tflWrapper.busStop(stopId: stopId) { resultBusStop in
-                tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId) { resultArrivals in
+            busStopUseCase.busStop(stopId: stopId) { resultBusStop in
+                arrivalsInMinutesUseCase.arrivalsInMinutes(stopId: stopId, lineId: lineId) { resultArrivals in
                     let resultDisplayModel = Self.displayModelFrom(
                         lineId: lineId,
                         resultBusStop: resultBusStop,
-                        resultArrivalsInSeconds: resultArrivals,
+                        resultArrivalsInMinutes: resultArrivals,
                         arrivalsFormatter: arrivalsFormatter
                     )
                     DispatchQueue.main.async { resultDisplayModel.fold(success: success, failure: failure) }
@@ -60,15 +61,13 @@ extension ViewModelDispatchQueue: ViewModel {
 
     private static func displayModelFrom(
         lineId: String,
-        resultBusStop: Result<BusStop, TfLWrapperError>?,
-        resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?,
+        resultBusStop: Result<BusStop, Error>,
+        resultArrivalsInMinutes: Result<[Int], Error>,
         arrivalsFormatter: ArrivalsFormatter
     ) -> Result<SuccessDisplayModel, FailureDisplayModel> {
         guard
-            let resultBusStop = resultBusStop,
-            let resultArrivalsInSeconds = resultArrivalsInSeconds,
             case let .success(busStop) = resultBusStop,
-            case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
+            case let .success(arrivalsInMinutes) = resultArrivalsInMinutes
         else {
             return .failure(.init(message: Self.errorMessage))
         }
@@ -78,7 +77,7 @@ extension ViewModelDispatchQueue: ViewModel {
                 busStopCode: busStop.streetCode,
                 busStopName: busStop.stopName,
                 line: lineId.uppercased(),
-                arrivals: arrivalsFormatter.arrivalsText(from: arrivalsInSeconds)
+                arrivals: arrivalsFormatter.arrivalsText(from: arrivalsInMinutes)
             )
         )
     }

@@ -1,12 +1,12 @@
 import XCTest
-import WidgetFeature
+import WidgetViewModel
 
-final class ViewModelOperationQueueTests: XCTestCase {
+final class ViewModelDispatchQueueTests: XCTestCase {
 
-    private typealias `Self` = ViewModelOperationQueueTests
+    private typealias `Self` = ViewModelDispatchQueueTests
     private enum FakeError: Error { case fake }
 
-    private weak var weakViewModel: ViewModelOperationQueue!
+    private weak var weakViewModel: ViewModelDispatchQueue!
     private weak var weakUserConfigurationMock: MockUserConfiguration!
     private weak var weakTfLWrapperMock: MockTfLWrapper!
     private weak var weakArrivalsFormatterMock: MockArrivalsFormatter!
@@ -19,7 +19,7 @@ final class ViewModelOperationQueueTests: XCTestCase {
     }
 }
 
-extension ViewModelOperationQueueTests {
+extension ViewModelDispatchQueueTests {
     func test_getDisplayModelFails_withoutStopIdNorLineId() {
         let (userConfigurationMock, _, _, viewModel) = makeViewModel(processingQueue: Self.makeConcurrentQueue())
         userConfigurationMock.stopId = nil
@@ -149,7 +149,7 @@ extension ViewModelOperationQueueTests {
                 if displayModel.busStopName == "STOP NAME" { busStopNameExpectation.fulfill() }
                 if displayModel.line == "LINEID" { lineExpectation.fulfill() }
                 if displayModel.arrivals == "formattedArrivals" { arrivalsExpectation.fulfill() }
-            },
+        },
             failure: { _ in }
         )
 
@@ -163,7 +163,7 @@ extension ViewModelOperationQueueTests {
     }
 }
 
-extension ViewModelOperationQueueTests {
+extension ViewModelDispatchQueueTests {
     private func assertViewModelNotLeaking() {
         XCTAssertNil(weakViewModel)
     }
@@ -181,12 +181,12 @@ extension ViewModelOperationQueueTests {
     }
 
     private func makeViewModel(
-        processingQueue: OperationQueue
-    ) -> (MockUserConfiguration, MockTfLWrapper, MockArrivalsFormatter, ViewModelOperationQueue) {
+        processingQueue: DispatchQueue
+    ) -> (MockUserConfiguration, MockTfLWrapper, MockArrivalsFormatter, ViewModelDispatchQueue) {
         let userConfigurationMock = MockUserConfiguration()
         let tflWrapperMock = MockTfLWrapper()
         let arrivalsFormatterMock = MockArrivalsFormatter()
-        let viewModel = ViewModelOperationQueue(
+        let viewModel = ViewModelDispatchQueue(
             userConfiguration: userConfigurationMock,
             tflWrapper: tflWrapperMock,
             arrivalsFormatter: arrivalsFormatterMock,
@@ -199,10 +199,7 @@ extension ViewModelOperationQueueTests {
         return (userConfigurationMock, tflWrapperMock, arrivalsFormatterMock, viewModel)
     }
 
-    private static func makeConcurrentQueue() -> OperationQueue {
-        let operationQueue = OperationQueue()
-        operationQueue.maxConcurrentOperationCount = 4
-        operationQueue.qualityOfService = .userInitiated
-        return operationQueue
+    private static func makeConcurrentQueue() -> DispatchQueue {
+        return .global(qos: .userInitiated)
     }
 }

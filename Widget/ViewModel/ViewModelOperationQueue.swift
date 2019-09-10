@@ -1,27 +1,31 @@
 import Foundation
 import OperationsLib
+import WidgetUseCases
 
-public final class ViewModelOperationQueue {
+final class ViewModelOperationQueue {
 
     private typealias `Self` = ViewModelOperationQueue
-    private typealias ResultBusStop = Result<BusStop, TfLWrapperError>
-    private typealias ResultArrivals = Result<[Int], TfLWrapperError>
+    private typealias ResultBusStop = Result<BusStop, Error>
+    private typealias ResultArrivals = Result<[Int], Error>
     private typealias ResultDisplayModel = Result<SuccessDisplayModel, FailureDisplayModel>
     private typealias MakeDisplayModelOperation = Input2OutputOperation<ResultBusStop, ResultArrivals, ResultDisplayModel>
 
-    private let userConfiguration: UserConfiguration
-    private let tflWrapper: TfLWrapper
+    private let stopAndLineIdsUseCase: StopAndLineIdsUseCase
+    private let busStopUseCase: BusStopUseCase
+    private let arrivalsInMinutesUseCase: ArrivalsInMinutesUseCase
     private let arrivalsFormatter: ArrivalsFormatter
     private let processingQueue: OperationQueue
 
-    public init(
-        userConfiguration: UserConfiguration,
-        tflWrapper: TfLWrapper,
+    init(
+        stopAndLineIdsUseCase: StopAndLineIdsUseCase,
+        busStopUseCase: BusStopUseCase,
+        arrivalsInMinutesUseCase: ArrivalsInMinutesUseCase,
         arrivalsFormatter: ArrivalsFormatter,
         processingQueue: OperationQueue
     ) {
-        self.userConfiguration = userConfiguration
-        self.tflWrapper = tflWrapper
+        self.stopAndLineIdsUseCase = stopAndLineIdsUseCase
+        self.busStopUseCase = busStopUseCase
+        self.arrivalsInMinutesUseCase = arrivalsInMinutesUseCase
         self.arrivalsFormatter = arrivalsFormatter
         self.processingQueue = processingQueue
     }
@@ -29,29 +33,26 @@ public final class ViewModelOperationQueue {
 
 extension ViewModelOperationQueue: ViewModel {
 
-    private static var openAppMessage: String { return "Open the 'TfL Bus' app 👍" }
+    private static var openAppMessage: String { return "Launch the 'TfL Bus' app 👍" }
     private static var errorMessage: String { return "Oops, an error occurred 🙏" }
 
-    public func getDisplayModel(
+    func getDisplayModel(
         start: @escaping () -> Void,
         success: @escaping (SuccessDisplayModel) -> Void,
         failure: @escaping (FailureDisplayModel) -> Void
     ) {
         OperationQueue.main.addOperation(start)
 
-        guard
-            let stopId = userConfiguration.stopId,
-            let lineId = userConfiguration.lineId
-        else {
+        guard let (stopId, lineId) = stopAndLineIdsUseCase.stopAndLineIds() else {
             OperationQueue.main.addOperation { failure(.init(message: Self.openAppMessage)) }
             return
         }
 
-        let getBusStop = OutputOperation<ResultBusStop> { [tflWrapper] recordOutput in
-            tflWrapper.busStop(stopId: stopId, completion: recordOutput)
+        let getBusStop = OutputOperation<ResultBusStop> { [busStopUseCase] recordOutput in
+            busStopUseCase.busStop(stopId: stopId, completion: recordOutput)
         }
-        let getArrivals = OutputOperation<ResultArrivals> { [tflWrapper] recordOutput in
-            tflWrapper.arrivalsInSeconds(stopId: stopId, lineId: lineId, completion: recordOutput)
+        let getArrivals = OutputOperation<ResultArrivals> { [arrivalsInMinutesUseCase] recordOutput in
+            arrivalsInMinutesUseCase.arrivalsInMinutes(stopId: stopId, lineId: lineId, completion: recordOutput)
         }
         let makeDisplayModel = Self.makeDisplayModelOperation(
             lineId: lineId,
@@ -87,7 +88,7 @@ extension ViewModelOperationQueue: ViewModel {
             let resultDisplayModel = displayModelFrom(
                 lineId: lineId,
                 resultBusStop: getBusStop.output,
-                resultArrivalsInSeconds: getArrivals.output,
+                resultArrivalsInMinutes: getArrivals.output,
                 arrivalsFormatter: arrivalsFormatter
             )
             recordOutput(resultDisplayModel)
@@ -105,15 +106,15 @@ extension ViewModelOperationQueue: ViewModel {
 
     private static func displayModelFrom(
         lineId: String,
-        resultBusStop: Result<BusStop, TfLWrapperError>?,
-        resultArrivalsInSeconds: Result<[Int], TfLWrapperError>?,
+        resultBusStop: ResultBusStop?,
+        resultArrivalsInMinutes: ResultArrivals?,
         arrivalsFormatter: ArrivalsFormatter
     ) -> Result<SuccessDisplayModel, FailureDisplayModel> {
         guard
             let resultBusStop = resultBusStop,
-            let resultArrivalsInSeconds = resultArrivalsInSeconds,
+            let resultArrivalsInMinutes = resultArrivalsInMinutes,
             case let .success(busStop) = resultBusStop,
-            case let .success(arrivalsInSeconds) = resultArrivalsInSeconds
+            case let .success(arrivalsInMinutes) = resultArrivalsInMinutes
         else {
             return .failure(.init(message: Self.errorMessage))
         }
@@ -123,7 +124,7 @@ extension ViewModelOperationQueue: ViewModel {
                 busStopCode: busStop.streetCode,
                 busStopName: busStop.stopName,
                 line: lineId.uppercased(),
-                arrivals: arrivalsFormatter.arrivalsText(from: arrivalsInSeconds)
+                arrivals: arrivalsFormatter.arrivalsText(from: arrivalsInMinutes)
             )
         )
     }

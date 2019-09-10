@@ -1,6 +1,6 @@
 import Foundation
-import WidgetFeature
-import MainFeature
+import WidgetUseCases
+import MainUseCases
 
 public final class UserConfigurationDefault {
 
@@ -24,5 +24,5 @@ public final class UserConfigurationDefault {
     }
 }
 
-extension UserConfigurationDefault: WidgetFeature.UserConfiguration { }
-extension UserConfigurationDefault: MainFeature.UserConfiguration { }
+extension UserConfigurationDefault: WidgetUseCases.UserConfiguration { }
+extension UserConfigurationDefault: MainUseCases.UserConfiguration { }

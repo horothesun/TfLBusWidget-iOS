@@ -1,4 +1,4 @@
-import WidgetFeature
+import WidgetUseCases
 
 final class MockTfLWrapper: TfLWrapper {
 

@@ -1,5 +1,5 @@
 import XCTest
-import MainFeature
+import MainViewModel
 
 final class MainViewModelTests: XCTestCase {
 

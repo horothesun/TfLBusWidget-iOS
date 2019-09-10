@@ -48,8 +48,36 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3FC9FEE2323D3D700E21E86"
-            BuildableName = "libWidgetFeature.a"
-            BlueprintName = "WidgetFeature"
+            BuildableName = "libWidgetUseCases.a"
+            BlueprintName = "WidgetUseCases"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B3F94F5C2324866400011ABF"
+            BuildableName = "libHttpClientLib.a"
+            BlueprintName = "HttpClientLib"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B324A91F2313228E00639923"
+            BuildableName = "libOperationsLib.a"
+            BlueprintName = "OperationsLib"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B31A368523100A76008ACD7D"
+            BuildableName = "libRepositoryLib.a"
+            BlueprintName = "RepositoryLib"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B30D27012327C26300C46D5E"
+            BuildableName = "libWidgetViewModel.a"
+            BlueprintName = "WidgetViewModel"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
@@ -59,8 +87,48 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
-               BuildableName = "WidgetFeatureTests.xctest"
-               BlueprintName = "WidgetFeatureTests"
+               BuildableName = "WidgetUseCasesTests.xctest"
+               BlueprintName = "WidgetUseCasesTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3F94F6D2324874000011ABF"
+               BuildableName = "HttpClientLibTests.xctest"
+               BlueprintName = "HttpClientLibTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B3FC9FD72322FF6900E21E86"
+               BuildableName = "OperationsLibTests.xctest"
+               BlueprintName = "OperationsLibTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B31A369023100AA0008ACD7D"
+               BuildableName = "RepositoryLibTests.xctest"
+               BlueprintName = "RepositoryLibTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B30D27132327C41800C46D5E"
+               BuildableName = "WidgetViewModelTests.xctest"
+               BlueprintName = "WidgetViewModelTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

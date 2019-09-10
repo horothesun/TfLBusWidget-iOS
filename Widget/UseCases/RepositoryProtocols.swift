@@ -1,24 +1,5 @@
 import Foundation
 
-public struct SuccessDisplayModel {
-    public let busStopCode: String
-    public let busStopName: String
-    public let line: String
-    public let arrivals: String
-}
-
-public struct FailureDisplayModel: Error {
-    public let message: String
-}
-
-public protocol ViewModel {
-    func getDisplayModel(
-        start: @escaping () -> Void,
-        success: @escaping (SuccessDisplayModel) -> Void,
-        failure: @escaping (FailureDisplayModel) -> Void
-    )
-}
-
 public enum TfLWrapperError: Error { case generic(Error) }
 
 public struct BusStop: Codable {
@@ -48,8 +29,4 @@ public protocol TfLWrapper {
 public protocol UserConfiguration {
     var stopId: String? { get set }
     var lineId: String? { get set }
-}
-
-public protocol ArrivalsFormatter {
-    func arrivalsText(from arrivalsInSeconds: [Int]) -> String
 }

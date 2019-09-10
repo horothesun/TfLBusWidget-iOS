@@ -1,5 +1,5 @@
 import XCTest
-import WidgetFeature
+import WidgetViewModel
 
 final class ArrivalsFormatterDefaultTests: XCTestCase {
 
@@ -17,21 +17,21 @@ extension ArrivalsFormatterDefaultTests {
         XCTAssertEqual(result, "NA")
     }
 
-    func test_arrivalsText_withLessThan1MinArrival_returnsDue() {
+    func test_arrivalsText_with0MinArrival_returnsDue() {
         let arrivalsFormatter = makeArrivalsFormatter()
-        let result = arrivalsFormatter.arrivalsText(from: [10])
+        let result = arrivalsFormatter.arrivalsText(from: [0])
         XCTAssertEqual(result, "Due")
     }
 
     func test_arrivalsText_with2MinsArrival_returns2min() {
         let arrivalsFormatter = makeArrivalsFormatter()
-        let result = arrivalsFormatter.arrivalsText(from: [120])
+        let result = arrivalsFormatter.arrivalsText(from: [2])
         XCTAssertEqual(result, "2'")
     }
 
-    func test_arrivalsText_with10s_60s_119s_121s_Arrivals_returnsDue_1m_1m_2m() {
+    func test_arrivalsText_with0Min_1Min_1Min_2Min_Arrivals_returnsDue_1Min_1Min_2Min() {
         let arrivalsFormatter = makeArrivalsFormatter()
-        let result = arrivalsFormatter.arrivalsText(from: [10, 60, 119, 121])
+        let result = arrivalsFormatter.arrivalsText(from: [0, 1, 1, 2])
         XCTAssertEqual(result, "Due, 1', 1', 2'")
     }
 }

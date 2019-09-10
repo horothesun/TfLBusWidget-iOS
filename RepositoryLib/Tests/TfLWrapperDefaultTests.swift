@@ -1,5 +1,5 @@
 import XCTest
-@testable import WidgetFeature
+@testable import WidgetUseCases
 @testable import RepositoryLib
 
 final class TfLWrapperDefaultTests: XCTestCase {

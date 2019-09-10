@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3FC9FEE2323D3D700E21E86"
-            BuildableName = "libWidgetFeature.a"
-            BlueprintName = "WidgetFeature"
+            BuildableName = "libWidgetUseCases.a"
+            BlueprintName = "WidgetUseCases"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
          <BuildableReference
@@ -82,8 +82,15 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3F94F8B2325601700011ABF"
-            BuildableName = "libMainFeature.a"
-            BlueprintName = "MainFeature"
+            BuildableName = "libMainViewModel.a"
+            BlueprintName = "MainViewModel"
+            ReferencedContainer = "container:TfLBus.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B30D27012327C26300C46D5E"
+            BuildableName = "libWidgetViewModel.a"
+            BlueprintName = "WidgetViewModel"
             ReferencedContainer = "container:TfLBus.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
@@ -113,8 +120,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3FCA00C2323D6A100E21E86"
-               BuildableName = "WidgetFeatureTests.xctest"
-               BlueprintName = "WidgetFeatureTests"
+               BuildableName = "WidgetUseCasesTests.xctest"
+               BlueprintName = "WidgetUseCasesTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -133,8 +140,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3F94FA5232579C300011ABF"
-               BuildableName = "MainFeatureTests.xctest"
-               BlueprintName = "MainFeatureTests"
+               BuildableName = "MainViewModelTests.xctest"
+               BlueprintName = "MainViewModelTests"
+               ReferencedContainer = "container:TfLBus.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B30D27132327C41800C46D5E"
+               BuildableName = "WidgetViewModelTests.xctest"
+               BlueprintName = "WidgetViewModelTests"
                ReferencedContainer = "container:TfLBus.xcodeproj">
             </BuildableReference>
          </TestableReference>

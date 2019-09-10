@@ -1,5 +1,5 @@
 import UIKit
-import MainFeature
+import MainViewModel
 
 final class MainViewController: UIViewController {
 
@@ -21,11 +21,6 @@ final class MainViewController: UIViewController {
         configureViewHierarchy()
         configureLayout()
         configureViews()
-
-        viewModel.update(stopId: "490001302S")
-//        viewModel.cleanStopId()
-        viewModel.update(lineId: "271")
-//        viewModel.cleanLineId()
     }
 
     override func viewWillAppear(_ animated: Bool) {
