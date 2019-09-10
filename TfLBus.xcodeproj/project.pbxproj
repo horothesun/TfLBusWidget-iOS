@@ -42,7 +42,7 @@
 		B31A3631230F62BF008ACD7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31A362F230F62BF008ACD7D /* LaunchScreen.storyboard */; };
 		B31A364D230F642B008ACD7D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A364C230F642B008ACD7D /* NotificationCenter.framework */; };
 		B31A3657230F642B008ACD7D /* Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B31A364A230F642A008ACD7D /* Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		B31A368923100A76008ACD7D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A368823100A76008ACD7D /* Protocols.swift */; };
+		B31A368923100A76008ACD7D /* HttpClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A368823100A76008ACD7D /* HttpClientProtocol.swift */; };
 		B31A369623100AA0008ACD7D /* libRepositoryLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31A368623100A76008ACD7D /* libRepositoryLib.a */; };
 		B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */; };
 		B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */; };
@@ -270,7 +270,7 @@
 		B31A364C230F642B008ACD7D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		B31A3654230F642B008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A368623100A76008ACD7D /* libRepositoryLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRepositoryLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B31A368823100A76008ACD7D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B31A368823100A76008ACD7D /* HttpClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientProtocol.swift; sourceTree = "<group>"; };
 		B31A369123100AA0008ACD7D /* RepositoryLibTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepositoryLibTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31A369523100AA0008ACD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TfLWrapperDefault.swift; sourceTree = "<group>"; };
@@ -581,7 +581,7 @@
 		B31A368723100A76008ACD7D /* RepositoryLib */ = {
 			isa = PBXGroup;
 			children = (
-				B31A368823100A76008ACD7D /* Protocols.swift */,
+				B31A368823100A76008ACD7D /* HttpClientProtocol.swift */,
 				B31A369F23100D24008ACD7D /* TfLWrapperDefault.swift */,
 				B31A36A123100DD6008ACD7D /* UserConfigurationDefault.swift */,
 				B31A369223100AA0008ACD7D /* Tests */,
@@ -1257,7 +1257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B31A368923100A76008ACD7D /* Protocols.swift in Sources */,
+				B31A368923100A76008ACD7D /* HttpClientProtocol.swift in Sources */,
 				B31A36A223100DD6008ACD7D /* UserConfigurationDefault.swift in Sources */,
 				B31A36A023100D24008ACD7D /* TfLWrapperDefault.swift in Sources */,
 			);
