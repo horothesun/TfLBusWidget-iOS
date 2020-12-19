@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch: # enable manual execution
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - name: Cancel previous runs
+      uses: styfle/cancel-workflow-action@0.6.0
+      with:
+        access_token: ${{ github.token }}
+
+    - uses: actions/checkout@v2
+    - name: Build and test
+      run: |
+        xcodebuild \
+          -project TfLBus.xcodeproj \
+          -scheme TfLBus \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.2' \
+          test |\
+          xcpretty
+
