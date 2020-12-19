@@ -1,5 +1,7 @@
 # TfL Bus Widget
 
+[![CI](https://github.com/horothesun/TfLBusWidget-iOS/workflows/CI/badge.svg)](https://github.com/horothesun/TfLBusWidget-iOS/blob/master/.github/workflows/ci.yml)
+
 iOS widget to display specific _Transport for London_ bus stop/line arrival times.
 
 APIs: [TfL Wrapper](https://gitlab.com/horothesun/TfLWrapper) (docs: [YAML](https://tfl-wrapper.herokuapp.com/docs.yaml), [JSON](https://tfl-wrapper.herokuapp.com/docs.json)).
@@ -11,3 +13,4 @@ APIs: [TfL Wrapper](https://gitlab.com/horothesun/TfLWrapper) (docs: [YAML](http
 ## Modules
 
 ![Modules](https://github.com/horothesun/TfLBusWidget-iOS/blob/master/images/modules.svg)
+
