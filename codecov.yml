@@ -4,5 +4,5 @@ coverage:
   precision: 2
 
 ignore:
-  - "*/**/Tests/*"
+  - "*/**/Tests/"
 
